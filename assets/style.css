@@ -1,6 +1,12 @@
 @font-face {
   font-family: "aeonik";
   src: url(./fonts/Aeonik/Aeonik-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "aeonik";
+  src: url(./fonts/Aeonik/Aeonik-Regular.otf);
+  font-weight: 400;
 }
 * {
   margin: 0;
@@ -8,9 +14,52 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body,
 html {
   font-family: "aeonik";
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.titlebox {
+  position: relative;
+}
+.titlebox h2 {
+  text-align: center;
+  font-size: 5vw;
+  color: #003585;
+}
+
+.btn {
+  padding: 18px 30px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.y_btn {
+  background-color: #FEBA02;
+  border-radius: 100px;
+}
+.y_btn span {
+  margin: 10px;
 }
 
 .herosection {
@@ -98,32 +147,6 @@ html {
     -webkit-transform: rotateZ(0deg);
   }
 }
-@keyframes stars {
-  0% {
-    background-position: 0 0;
-  }
-  20% {
-    background-position: 20px 20px;
-  }
-  40% {
-    background-position: 40px 40px;
-  }
-  60% {
-    background-position: 60px 60px;
-  }
-  80% {
-    background-position: 80px 80px;
-  }
-  100% {
-    background-position: 100px 100px;
-  }
-}
-.secw {
-  height: 100vh;
-  background: url(/assets/images/herobg.webp);
-  width: 100%;
-}
-
 #space {
   width: 100%;
   height: 100%;
@@ -131,4 +154,114 @@ html {
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.videosection {
+  padding: 40px;
+}
+.videosection .introvideo {
+  width: 100%;
+  margin: auto;
+}
+
+.projects .titlebox {
+  position: relative;
+}
+.projects .titlebox .y_btn {
+  margin: 10px;
+}
+.projects .titlebox .rocket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.projects .titlebox .rocket .innerrocket {
+  position: absolute;
+  right: -300px;
+  bottom: -100px;
+  transform: rotate(16deg);
+}
+
+.clients-box {
+  background: #181818;
+  padding-top: 300px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  position: relative;
+}
+.clients-box .custom-shape-divider-top {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+.clients-box .custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 300px;
+}
+.clients-box .custom-shape-divider-top svg .shape-fill {
+  fill: #FFFFFF;
+}
+.clients-box .custom-shape-divider-top2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.clients-box .custom-shape-divider-top2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 300px;
+}
+.clients-box .custom-shape-divider-top2 svg .shape-fill {
+  fill: #FEBA02;
+}
+.clients-box .astroimg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.clients-box .toplogo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.clients-box .toplogo .l_box:nth-child(1), .clients-box .toplogo .l_box:nth-child(6) {
+  margin-top: -200px;
+}
+.clients-box .toplogo .l_box:nth-child(2), .clients-box .toplogo .l_box:nth-child(5) {
+  margin-top: -50px;
+}
+.clients-box .bottomlogo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 900px;
+  margin: auto;
+  align-items: center;
+}
+.clients-box .bottomlogo .l_box:nth-child(1), .clients-box .bottomlogo .l_box:nth-child(5) {
+  margin-top: -200px;
+}
+.clients-box .bottomlogo .l_box:nth-child(2), .clients-box .bottomlogo .l_box:nth-child(4) {
+  margin-top: -100px;
+}
+
+.dummy {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

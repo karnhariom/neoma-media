@@ -1,11 +1,18 @@
 @font-face {
     font-family: "aeonik";
     src: url(./fonts/Aeonik/Aeonik-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "aeonik";
+    src: url(./fonts/Aeonik/Aeonik-Regular.otf);
+    font-weight: 400;
 }
 
 $black: #181818;
 $orange: #FEBA02;
-$blur: #003585;
+$blue: #003585;
 
 * {
     margin: 0;
@@ -13,9 +20,54 @@ $blur: #003585;
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body,
 html {
     font-family: "aeonik";
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.titlebox {
+    position: relative;
+
+    h2 {
+        text-align: center;
+        font-size: 5vw;
+        color: $blue;
+    }
+}
+
+.btn {
+    padding: 18px 30px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+.t_center {
+    text-align: center;
+}
+
+.y_btn {
+    background-color: $orange;
+    border-radius: 100px;
+
+    span {
+        margin: 10px;
+    }
 }
 
 // herosection style start
@@ -118,15 +170,6 @@ html {
     }
 }
 
-
-// herosection style end
-
-.secw{
-    height: 100vh;
-    background: url(/assets/images/herobg.webp);
-    width: 100%;
-}
-
 #space {
     width: 100%;
     height: 100%;
@@ -134,4 +177,151 @@ html {
     top: 0;
     left: 0;
     z-index: 0
+}
+// herosection style end
+
+// video section start 
+.videosection {
+    // background: $black;
+    padding: 40px;
+
+    .introvideo {
+        width: 100%;
+        margin: auto;
+    }
+}
+// video section end
+
+
+// projects section start 
+.projects {
+    .titlebox {
+        position: relative;
+
+        .y_btn {
+            margin: 10px;
+        }
+
+        .rocket {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            .innerrocket {
+                position: absolute;
+                right: -300px;
+                bottom: -100px;
+                transform: rotate(16deg);
+            }
+        }
+    }
+}
+// projects section end
+
+
+// client section start 
+.clients-box {
+    background: $black;
+    padding-top: 300px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    position: relative;
+
+    .custom-shape-divider-top {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 1;
+        // background-color: white;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 300px;
+
+            .shape-fill {
+                fill: #FFFFFF;
+            }
+        }
+        
+
+    }
+
+    .custom-shape-divider-top2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 300px;
+
+            .shape-fill {
+                fill: $orange;
+            }
+        }
+    }
+
+    .astroimg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        svg {
+            // height: 300px;
+        }
+    }
+
+    .toplogo{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 1100px;
+        margin: auto;
+        align-items: center;
+        margin-bottom: 200px;
+
+        .l_box:nth-child(1),.l_box:nth-child(6){
+            margin-top: -200px;
+        }
+
+        .l_box:nth-child(2),.l_box:nth-child(5){
+            margin-top: -50px;
+        }
+    }
+
+    .bottomlogo{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 900px;
+        margin: auto;
+        align-items: center;
+
+        .l_box:nth-child(1),.l_box:nth-child(5){
+            margin-top: -200px;
+        }
+
+        .l_box:nth-child(2),.l_box:nth-child(4){
+            margin-top: -100px;
+        }
+    }
+}
+// client section end
+
+
+.dummy {
+    height: 100vh;
 }

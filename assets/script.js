@@ -10,15 +10,28 @@ gsap.from(".area2", {
 
 gsap.from(".earth-image", {
     opacity: 0,
-    // y: 150,
-    // x: 70,
     duration: 2,
     delay: 2,
-    // scale: 5x
 });
 
-$('.hero').ripples({
-    resolution: 512,
-    dropRadius: 20,
-    perturbance: 0.04,
-  });
+gsap.from(".introvideo", {
+    scrollTrigger: ".introvideo", // start the animation when ".box" enters the viewport (once)
+    scale: .5,
+    duration: 3
+});
+
+gsap.from(".innerrocket", {
+    scrollTrigger: {
+        trigger: ".innerrocket",
+        scrub: true,
+        start: "top bottom",
+        end: "top top"
+    },
+
+    xPercent: -800,
+    y: -500,
+    transformOrigin: "left right",
+    ease: "none"
+});
+
+console.log("hello");
