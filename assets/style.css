@@ -158,9 +158,25 @@ p {
 .videosection {
   padding: 40px;
 }
+.videosection #video-container {
+  position: relative;
+}
 .videosection .introvideo {
   width: 100%;
   margin: auto;
+}
+.videosection #play-pause-button {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  background: #FEBA02;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
 }
 
 .projects .titlebox {

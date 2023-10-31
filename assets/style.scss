@@ -185,12 +185,29 @@ p {
     // background: $black;
     padding: 40px;
 
+    #video-container{
+        position: relative;
+    }
+
     .introvideo {
         width: 100%;
         margin: auto;
     }
-}
 
+    #play-pause-button {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        background: $orange;
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-content: center;
+        border-radius: 100%;
+    }
+}
 // video section end
 
 
