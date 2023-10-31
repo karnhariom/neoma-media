@@ -43,7 +43,6 @@ p {
     position: relative;
 
     h2 {
-        text-align: center;
         font-size: 5vw;
         color: $blue;
     }
@@ -178,6 +177,7 @@ p {
     left: 0;
     z-index: 0
 }
+
 // herosection style end
 
 // video section start 
@@ -190,6 +190,7 @@ p {
         margin: auto;
     }
 }
+
 // video section end
 
 
@@ -219,6 +220,7 @@ p {
         }
     }
 }
+
 // projects section end
 
 
@@ -250,7 +252,7 @@ p {
                 fill: #FFFFFF;
             }
         }
-        
+
 
     }
 
@@ -286,41 +288,215 @@ p {
         }
     }
 
-    .toplogo{
+    .toplogo {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         max-width: 1100px;
         margin: auto;
         align-items: center;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
 
-        .l_box:nth-child(1),.l_box:nth-child(6){
+        .l_box {
+            display: grid;
+            place-content: center;
+            height: 120px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+            }
+        }
+
+        .l_box:nth-child(1),
+        .l_box:nth-child(6) {
             margin-top: -200px;
         }
 
-        .l_box:nth-child(2),.l_box:nth-child(5){
+        .l_box:nth-child(2),
+        .l_box:nth-child(5) {
             margin-top: -50px;
+        }
+
+        .l_box:last-child::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+            right: 0;
+            top: -30px;
         }
     }
 
-    .bottomlogo{
+    .bottomlogo {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         max-width: 900px;
         margin: auto;
         align-items: center;
 
-        .l_box:nth-child(1),.l_box:nth-child(5){
+        .l_box {
+            display: grid;
+            place-content: center;
+            height: 120px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+                top: -30px;
+            }
+
+            &:nth-child(3)::before {
+                top: -46px;
+            }
+        }
+
+
+        .l_box:nth-child(1),
+        .l_box:nth-child(5) {
             margin-top: -200px;
         }
 
-        .l_box:nth-child(2),.l_box:nth-child(4){
+        .l_box:nth-child(2),
+        .l_box:nth-child(4) {
             margin-top: -100px;
+        }
+
+        .l_box:last-child::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+            right: 0;
+            top: -30px;
+        }
+    }
+
+    .custom-shape-divider-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 250px;
+
+            .shape-fill {
+                fill: #000C1F;
+            }
+        }
+    }
+
+}
+
+// client section end
+
+// usps section start 
+.usps {
+    background: #000C1F;
+    padding: 4vw;
+
+    .uspscontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .uspsleft {
+            .titlebox {
+                .sec-title {
+                    margin-bottom: 20px;
+                    color: $orange;
+                }
+
+                p {
+                    margin-bottom: 30px;
+                    color: white;
+                }
+            }
+        }
+
+        .upsright {
+            display: flex;
+            justify-content: center;
+
+            svg {
+                width: 100%;
+            }
         }
     }
 }
-// client section end
 
+// usps section end 
+
+// testimonial section start 
+.testimonial {
+    padding: 4vw;
+
+    .swiper {
+        width: 80%;
+        height: 100%;
+
+        .revbox{
+            padding: 20px 100px;
+
+            p{
+                font-size: 26px;
+                line-height: 1.4em;
+            }
+
+            h3{
+                font-size: 35px;
+                color: $orange;
+                margin-top: 30px;
+            }
+
+        }
+
+        .s_buttons{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            gap: 20px;
+            background-color: white;
+
+            .swiper-button-next, 
+            .swiper-button-prev{
+                position: static;
+                width: 50px;
+                height: 50px;
+                border: 2px solid $blue;
+                border-radius: 100%;
+                display: grid;
+                place-content: center;
+
+                &::after{
+                    display: none;
+                }
+
+                i{
+                    color: $orange;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+// testimonial section end
 
 .dummy {
     height: 100vh;

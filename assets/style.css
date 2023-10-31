@@ -37,7 +37,6 @@ p {
   position: relative;
 }
 .titlebox h2 {
-  text-align: center;
   font-size: 5vw;
   color: #003585;
 }
@@ -240,13 +239,37 @@ p {
   max-width: 1100px;
   margin: auto;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
-.clients-box .toplogo .l_box:nth-child(1), .clients-box .toplogo .l_box:nth-child(6) {
+.clients-box .toplogo .l_box {
+  display: grid;
+  place-content: center;
+  height: 120px;
+  position: relative;
+}
+.clients-box .toplogo .l_box::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.clients-box .toplogo .l_box:nth-child(1),
+.clients-box .toplogo .l_box:nth-child(6) {
   margin-top: -200px;
 }
-.clients-box .toplogo .l_box:nth-child(2), .clients-box .toplogo .l_box:nth-child(5) {
+.clients-box .toplogo .l_box:nth-child(2),
+.clients-box .toplogo .l_box:nth-child(5) {
   margin-top: -50px;
+}
+.clients-box .toplogo .l_box:last-child::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+  top: -30px;
 }
 .clients-box .bottomlogo {
   display: grid;
@@ -255,11 +278,127 @@ p {
   margin: auto;
   align-items: center;
 }
-.clients-box .bottomlogo .l_box:nth-child(1), .clients-box .bottomlogo .l_box:nth-child(5) {
+.clients-box .bottomlogo .l_box {
+  display: grid;
+  place-content: center;
+  height: 120px;
+  position: relative;
+}
+.clients-box .bottomlogo .l_box::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  top: -30px;
+}
+.clients-box .bottomlogo .l_box:nth-child(3)::before {
+  top: -46px;
+}
+.clients-box .bottomlogo .l_box:nth-child(1),
+.clients-box .bottomlogo .l_box:nth-child(5) {
   margin-top: -200px;
 }
-.clients-box .bottomlogo .l_box:nth-child(2), .clients-box .bottomlogo .l_box:nth-child(4) {
+.clients-box .bottomlogo .l_box:nth-child(2),
+.clients-box .bottomlogo .l_box:nth-child(4) {
   margin-top: -100px;
+}
+.clients-box .bottomlogo .l_box:last-child::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+  top: -30px;
+}
+.clients-box .custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.clients-box .custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 250px;
+}
+.clients-box .custom-shape-divider-bottom svg .shape-fill {
+  fill: #000C1F;
+}
+
+.usps {
+  background: #000C1F;
+  padding: 4vw;
+}
+.usps .uspscontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.usps .uspscontainer .uspsleft .titlebox .sec-title {
+  margin-bottom: 20px;
+  color: #FEBA02;
+}
+.usps .uspscontainer .uspsleft .titlebox p {
+  margin-bottom: 30px;
+  color: white;
+}
+.usps .uspscontainer .upsright {
+  display: flex;
+  justify-content: center;
+}
+.usps .uspscontainer .upsright svg {
+  width: 100%;
+}
+
+.testimonial {
+  padding: 4vw;
+}
+.testimonial .swiper {
+  width: 80%;
+  height: 100%;
+}
+.testimonial .swiper .revbox {
+  padding: 20px 100px;
+}
+.testimonial .swiper .revbox p {
+  font-size: 26px;
+  line-height: 1.4em;
+}
+.testimonial .swiper .revbox h3 {
+  font-size: 35px;
+  color: #FEBA02;
+  margin-top: 30px;
+}
+.testimonial .swiper .s_buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 20px;
+  background-color: white;
+}
+.testimonial .swiper .s_buttons .swiper-button-next,
+.testimonial .swiper .s_buttons .swiper-button-prev {
+  position: static;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #003585;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+}
+.testimonial .swiper .s_buttons .swiper-button-next::after,
+.testimonial .swiper .s_buttons .swiper-button-prev::after {
+  display: none;
+}
+.testimonial .swiper .s_buttons .swiper-button-next i,
+.testimonial .swiper .s_buttons .swiper-button-prev i {
+  color: #FEBA02;
+  font-size: 20px;
 }
 
 .dummy {

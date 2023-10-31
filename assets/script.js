@@ -34,4 +34,9 @@ gsap.from(".innerrocket", {
     ease: "none"
 });
 
-console.log("hello");
+var swiper = new Swiper(".revSwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
