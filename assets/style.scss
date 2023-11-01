@@ -10,6 +10,12 @@
     font-weight: 400;
 }
 
+@font-face {
+    font-family: "aeonik";
+    src: url(./fonts/Aeonik/Aeonik-Medium.otf);
+    font-weight: 500;
+}
+
 $black: #181818;
 $orange: #FEBA02;
 $blue: #003585;
@@ -148,26 +154,6 @@ p {
     }
 }
 
-@keyframes earth {
-    from {
-        -webkit-transform: rotateZ(0deg);
-    }
-
-    to {
-        -webkit-transform: rotateZ(360deg);
-    }
-}
-
-
-@keyframes earth-rotate {
-    from {
-        -webkit-transform: rotateZ(360deg);
-    }
-
-    to {
-        -webkit-transform: rotateZ(0deg);
-    }
-}
 
 #space {
     width: 100%;
@@ -185,7 +171,7 @@ p {
     // background: $black;
     padding: 40px;
 
-    #video-container{
+    #video-container {
         position: relative;
     }
 
@@ -208,6 +194,7 @@ p {
         border-radius: 100%;
     }
 }
+
 // video section end
 
 
@@ -424,7 +411,8 @@ p {
 
 // usps section start 
 .usps {
-    background: #000C1F;
+    background: url(./images/Universe_items.png) #000C1F;
+    background-size: cover;
     padding: 4vw;
 
     .uspscontainer {
@@ -466,15 +454,15 @@ p {
         width: 80%;
         height: 100%;
 
-        .revbox{
+        .revbox {
             padding: 20px 100px;
 
-            p{
+            p {
                 font-size: 26px;
                 line-height: 1.4em;
             }
 
-            h3{
+            h3 {
                 font-size: 35px;
                 color: $orange;
                 margin-top: 30px;
@@ -482,7 +470,7 @@ p {
 
         }
 
-        .s_buttons{
+        .s_buttons {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -490,8 +478,8 @@ p {
             gap: 20px;
             background-color: white;
 
-            .swiper-button-next, 
-            .swiper-button-prev{
+            .swiper-button-next,
+            .swiper-button-prev {
                 position: static;
                 width: 50px;
                 height: 50px;
@@ -500,11 +488,11 @@ p {
                 display: grid;
                 place-content: center;
 
-                &::after{
+                &::after {
                     display: none;
                 }
 
-                i{
+                i {
                     color: $orange;
                     font-size: 20px;
                 }
@@ -515,6 +503,187 @@ p {
 
 // testimonial section end
 
-.dummy {
-    height: 100vh;
+// contact section start 
+.contactsection {
+    padding: 4vw;
+    padding-top: 0;
+    padding-bottom: 200px;
+    overflow-y: hidden;
+
+    .contactbox {
+        border-radius: 20px;
+        background: url("./images/planets.png") $blue;
+        background-size: cover;
+        // background-blend-mode: darken;
+        padding: 4vw;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 55vw;
+            height: 55vw;
+            border-radius: 100%;
+            border: 2px solid #FFF;
+            background: linear-gradient(0deg, #002152 0.09%, #004AB8 49.92%);
+            box-shadow: 1px 9px 40px 0px rgba(0, 0, 0, 0.12);
+            top: -30vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .titlebox {
+            max-width: 50vw;
+            margin: auto;
+
+            .sec-title {
+                color: white;
+                font-weight: 500;
+            }
+        }
+
+        .bot_astr {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+            margin-bottom: -200px;
+
+            svg{
+                animation: astro 4s linear infinite alternate;
+            }
+        }
+    }
+}
+// contact section end 
+
+
+// footer style start
+footer{
+    padding: 4vw;
+    padding-bottom: 0;
+
+    .socialbar{
+        padding: 20px;
+
+        .s_icons{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+
+            .sicon{
+                color: $orange;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .bottom_footer{
+        display: flex;
+        margin-top: 30px;
+        position: relative;
+        padding-bottom: 20px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(270deg, rgba(24, 24, 24, 0.00) 0%, #181818 51.1%, rgba(0, 0, 0, 0.00) 100%);
+            bottom: 0;
+        }
+
+        .compinfo{
+            width: 50%;
+            padding: 2vw;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                right: 0;
+                background: linear-gradient(180deg, #181818 0%, rgba(24, 24, 24, 0.00) 110.94%);
+            }
+        }
+
+        .f_links{
+            width: 50%;
+            display: flex;
+            padding: 2vw;
+
+            .f_serv{
+                padding: 0 20px;
+                h3{
+                    color: $blue;
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+
+                ul{
+                    list-style: none;
+
+                    li{
+                        margin-bottom: 10px;
+
+                        a{
+                            color: #4D4D4D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .c_footer{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+
+            li a{
+                color: #4D4D4D;
+            }
+        }
+    }
+} 
+// footer style end
+
+@keyframes earth {
+    from {
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+
+@keyframes earth-rotate {
+    from {
+        -webkit-transform: rotateZ(360deg);
+    }
+
+    to {
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes astro{
+    0%{
+        transform: translate(-30px, -30px);
+    }
+
+    100%{
+        transform: translate(30px, 30px);
+    }
 }

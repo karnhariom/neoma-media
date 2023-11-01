@@ -15,7 +15,7 @@ gsap.from(".earth-image", {
 });
 
 gsap.from(".introvideo", {
-    scrollTrigger: ".introvideo", // start the animation when ".box" enters the viewport (once)
+    scrollTrigger: ".introvideo",
     scale: .5,
     duration: 3
 });
@@ -33,6 +33,17 @@ gsap.from(".innerrocket", {
     transformOrigin: "left right",
     ease: "none"
 });
+
+// client logo amimation 
+
+gsap.from(".l_box img", {
+    scrollTrigger: ".l_box img",
+    y: -50,
+    duration: 3,
+    scrub: 1
+});
+
+
 
 // video button movement 
 const videoContainer = document.getElementById('video-container');
