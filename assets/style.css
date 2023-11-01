@@ -66,6 +66,52 @@ p {
   margin: 10px;
 }
 
+.topheader {
+  background-color: #181818;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topheader .logo a img {
+  height: 56px;
+}
+.topheader .navmneu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.topheader .navmneu .nalink {
+  list-style: none;
+}
+.topheader .navmneu .nalink a {
+  color: white;
+  position: relative;
+}
+.topheader .navmneu .nalink a .navtext {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.topheader .navmneu .nalink a .navico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s linear;
+}
+.topheader .navmneu .nalink:hover a .navico {
+  transform: translate(-50%, -50%) scale(1);
+}
+.topheader .navmneu .nalink:hover a .navtext {
+  opacity: 0;
+}
+.topheader .navmneu .nalink.active a .navico {
+  transform: translate(-50%, -50%) scale(1);
+}
+.topheader .navmneu .nalink.active a .navtext {
+  opacity: 0;
+}
+
 .herosection {
   background-color: #181818;
   overflow: hidden;
@@ -390,12 +436,17 @@ p {
 .testimonial .swiper .s_buttons .swiper-button-next,
 .testimonial .swiper .s_buttons .swiper-button-prev {
   position: static;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: 2px solid #003585;
-  border-radius: 100%;
+  border-radius: 1000px;
   display: grid;
   place-content: center;
+  transition: all 0.3s linear;
+}
+.testimonial .swiper .s_buttons .swiper-button-next:hover,
+.testimonial .swiper .s_buttons .swiper-button-prev:hover {
+  width: 60px;
 }
 .testimonial .swiper .s_buttons .swiper-button-next::after,
 .testimonial .swiper .s_buttons .swiper-button-prev::after {

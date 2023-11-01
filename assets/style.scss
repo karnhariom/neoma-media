@@ -75,8 +75,79 @@ p {
     }
 }
 
-// herosection style start
+// topheader section style start 
+.topheader{
+    background-color: $black;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    .logo{
+        a{
+            img{
+                height: 56px;
+            }
+        }
+    }
+
+    .navmneu{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .nalink {
+            list-style: none;
+
+            a{
+                color: white;
+                position: relative;
+
+                .navtext{
+                    opacity: 1;
+                    transition: all 0.3s linear;
+                }
+
+                .navico{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: all 0.3s linear;
+                }
+            }
+
+            &:hover{
+
+                a{
+                    .navico{
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+
+                    .navtext{
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &.active{
+
+                a{
+                    .navico{
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+
+                    .navtext{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// topheader section style end 
+
+// herosection style start
 .herosection {
     background-color: $black;
     overflow: hidden;
@@ -154,7 +225,6 @@ p {
     }
 }
 
-
 #space {
     width: 100%;
     height: 100%;
@@ -163,7 +233,6 @@ p {
     left: 0;
     z-index: 0
 }
-
 // herosection style end
 
 // video section start 
@@ -194,7 +263,6 @@ p {
         border-radius: 100%;
     }
 }
-
 // video section end
 
 
@@ -224,7 +292,6 @@ p {
         }
     }
 }
-
 // projects section end
 
 
@@ -406,7 +473,6 @@ p {
     }
 
 }
-
 // client section end
 
 // usps section start 
@@ -443,7 +509,6 @@ p {
         }
     }
 }
-
 // usps section end 
 
 // testimonial section start 
@@ -481,12 +546,17 @@ p {
             .swiper-button-next,
             .swiper-button-prev {
                 position: static;
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
                 border: 2px solid $blue;
-                border-radius: 100%;
+                border-radius: 1000px;
                 display: grid;
                 place-content: center;
+                transition: all 0.3s linear;
+
+                &:hover{
+                    width: 60px;
+                }
 
                 &::after {
                     display: none;
@@ -500,7 +570,6 @@ p {
         }
     }
 }
-
 // testimonial section end
 
 // contact section start 
