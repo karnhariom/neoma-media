@@ -28,14 +28,23 @@ html {
   font-family: "aeonik";
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   font-size: 18px;
 }
 
-p {
+p, li, a {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.3vw;
+  line-height: 1.5em;
 }
 
 .titlebox {
@@ -110,6 +119,13 @@ p {
 }
 .topheader .navmneu .nalink.active a .navtext {
   opacity: 0;
+}
+.topheader .hamburger {
+  display: none;
+}
+.topheader .hamburger i {
+  color: white;
+  font-size: 25px;
 }
 
 .herosection {
@@ -414,7 +430,7 @@ p {
   height: 100%;
 }
 .testimonial .swiper .revbox {
-  padding: 20px 100px;
+  padding: 2vw;
 }
 .testimonial .swiper .revbox p {
   font-size: 26px;
@@ -500,6 +516,192 @@ p {
 }
 .contactsection .contactbox .bot_astr svg {
   animation: astro 4s linear infinite alternate;
+}
+
+.servhero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(./images/soverlay.webp);
+  background-position: center center;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+.servhero h3 {
+  text-align: center;
+  color: white;
+  font-size: 6vw;
+  position: relative;
+  z-index: 1;
+}
+.servhero h3.stroked {
+  -webkit-text-stroke: 1px #FEBA02;
+  color: transparent;
+}
+.servhero .hangingastro {
+  position: absolute;
+  top: -10px;
+  left: 2vw;
+  animation: hangingastro 3s ease-in-out infinite alternate;
+  transform-origin: top;
+}
+.servhero .halfmoon {
+  position: absolute;
+  right: 0;
+  height: 90%;
+}
+
+.approach {
+  padding-top: 4vw;
+}
+.approach .titlebox .sec_desc {
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.approach .appr_grp {
+  margin-top: 60px;
+  overflow: hidden;
+  padding-top: 30px;
+  position: relative;
+}
+.approach .appr_grp .circle1 {
+  width: 100vw;
+  height: 50vw;
+  border: 1px solid black;
+  border-radius: 999999px 999999px 0 0;
+  position: relative;
+}
+.approach .appr_grp .circle1 .setcount {
+  margin-bottom: -50px;
+  height: 100px;
+  width: 50%;
+  transform-origin: right;
+  animation: set1 15s linear infinite normal;
+  transform: rotate(135deg);
+  position: absolute;
+  bottom: 0;
+}
+.approach .appr_grp .circle1 .setcount.setcont2 {
+  transform: rotate(0deg);
+  animation-delay: 4s;
+}
+.approach .appr_grp .circle1 .setcount.setcont2 img {
+  left: -30px;
+}
+.approach .appr_grp .circle1 .setcount img {
+  position: absolute;
+  left: -40px;
+  transform: rotate(45deg);
+}
+.approach .appr_grp .circle2 {
+  width: 80vw;
+  height: 40vw;
+  border: 1px solid black;
+  border-radius: 999999px 999999px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.approach .appr_grp .circle2 .setcount {
+  margin-bottom: -50px;
+  height: 100px;
+  width: 50%;
+  transform-origin: right;
+  animation: set2 15s linear infinite normal;
+  transform: rotate(135deg);
+  position: absolute;
+  bottom: 0;
+}
+.approach .appr_grp .circle2 .setcount.setcont2 {
+  transform: rotate(0deg);
+  animation-delay: 4s;
+}
+.approach .appr_grp .circle2 .setcount.setcont2 img {
+  left: -30px;
+}
+.approach .appr_grp .circle2 .setcount.setcont3 {
+  transform: rotate(0deg);
+  animation-delay: 8s;
+}
+.approach .appr_grp .circle2 .setcount.setcont3 img {
+  left: -30px;
+}
+.approach .appr_grp .circle2 .setcount img {
+  position: absolute;
+  left: -40px;
+  transform: rotate(45deg);
+}
+.approach .appr_grp .circle3 {
+  width: 60vw;
+  height: 30vw;
+  border: 1px solid black;
+  border-radius: 999999px 999999px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.approach .appr_grp .circle4 {
+  width: 40vw;
+  height: 20vw;
+  border: 1px solid black;
+  border-radius: 999999px 999999px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #040C1F;
+  box-shadow: #040C1F 0px -7px 36px 0px, #040C1F 0px 0px 0px 1px;
+}
+
+.expertise {
+  padding: 4vw;
+  background: #000c1f url(./images/expbanner.webp);
+  background-size: cover;
+}
+.expertise .titlebox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expertise .titlebox .sec-title {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.expertise .titlebox .sec-title svg {
+  width: 8vw;
+}
+.expertise .expsec {
+  color: white;
+}
+.expertise .expsec .singleexp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2vw 0;
+  align-items: center;
+}
+.expertise .expsec .singleexp .expcont .exsec {
+  margin-bottom: 25px;
+}
+.expertise .expsec .singleexp .expcont .exsec h4 {
+  font-size: 2vw;
+  margin-bottom: 15px;
+}
+.expertise .expsec .singleexp .expcont .exsec .s_list li {
+  margin-bottom: 15px;
+}
+.expertise .expsec .singleexp .expimg .img {
+  width: 80%;
+  height: 600px;
+  background-color: red;
+  margin: auto;
 }
 
 footer {
@@ -607,5 +809,82 @@ footer .c_footer ul li a {
   }
   100% {
     transform: translate(30px, 30px);
+  }
+}
+@keyframes hangingastro {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes set1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(185deg);
+  }
+}
+@keyframes set2 {
+  0% {
+    transform: rotate(185deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .topheader {
+    position: relative;
+  }
+  .topheader .navmneu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    left: 0;
+    height: calc(100vh - 70px);
+    background-color: black;
+    top: 70px;
+    z-index: 99;
+    justify-content: center;
+  }
+  .topheader .navmneu .nalink {
+    list-style: none;
+  }
+  .topheader .navmneu .nalink a {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .topheader .navmneu .nalink a .navtext {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+  .topheader .navmneu .nalink a .navico {
+    position: static;
+    transform: none;
+  }
+  .topheader .navmneu .nalink:hover a .navico {
+    transform: none;
+  }
+  .topheader .navmneu .nalink:hover a .navtext {
+    opacity: 1;
+  }
+  .topheader .navmneu .nalink.active a .navico {
+    transform: none;
+  }
+  .topheader .navmneu .nalink.active a .navtext {
+    opacity: 1;
+  }
+  .topheader .navmneu.navopen {
+    display: flex;
+  }
+  .topheader .hamburger {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

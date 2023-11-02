@@ -44,7 +44,6 @@ gsap.from(".l_box img", {
 });
 
 
-
 // video button movement 
 const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
@@ -55,8 +54,8 @@ videoContainer.addEventListener('mouseenter', () => {
 });
 
 videoContainer.addEventListener('mousemove', (e) => {
-    const x = e.clientX - videoContainer.getBoundingClientRect().left -25;
-    const y = e.clientY - videoContainer.getBoundingClientRect().top -35;
+    const x = e.clientX - videoContainer.getBoundingClientRect().left - 25;
+    const y = e.clientY - videoContainer.getBoundingClientRect().top - 35;
     playPauseButton.style.left = `${x}px`;
     playPauseButton.style.top = `${y}px`;
 });
@@ -80,7 +79,16 @@ playPauseButton.addEventListener('click', () => {
 
 var swiper = new Swiper(".revSwiper", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+var hamburger = document.querySelector(".hamburger")
+var navmenu = document.querySelector(".navmneu")
+
+hamburger.addEventListener("click", openmenu);
+
+function openmenu() {
+    navmenu.classList.toggle("navopen");
+}
