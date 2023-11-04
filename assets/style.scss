@@ -594,6 +594,7 @@ a {
     padding-top: 0;
     padding-bottom: 200px;
     overflow-y: hidden;
+    margin-top: 4vw;
 
     .contactbox {
         border-radius: 20px;
@@ -634,6 +635,7 @@ a {
             margin-bottom: -200px;
 
             svg {
+                width: 20vw;
                 animation: astro 4s linear infinite alternate;
             }
         }
@@ -689,61 +691,77 @@ a {
 }
 
 .approach {
-    padding-top: 4vw;
 
     .titlebox {
+        padding: 4vw;
+
         .sec_desc {
             max-width: 700px;
-            text-align: center;
-            margin: auto;
             margin-top: 20px;
         }
     }
 
     .appr_grp {
         margin-top: 60px;
-        overflow: hidden;
+        overflow: visible;
         padding-top: 30px;
         position: relative;
+        transform: scale(1.1);
+        z-index: -1;
+
+        .setcount {
+            margin-bottom: -50px;
+            height: 100px;
+            width: 50%;
+            transform-origin: right;
+            animation: set1 15s linear infinite normal;
+            transform: rotate(135deg);
+            position: absolute;
+            bottom: 0;
+
+            img {
+                position: absolute;
+                left: -40px;
+                transform: rotate(45deg);
+                width: 4vw;
+            }
+
+            .settext {
+                position: absolute;
+                padding: 10px;
+                background: url(./images/tframe.webp);
+                background-size: cover;
+                color: white;
+                border-radius: 20px;
+                transform: rotate(274deg);
+                top: 7px;
+                left: -158px;
+                padding: .5vw;
+
+                p {
+                    border: 1px solid white;
+                    padding: 3px;
+                    border: 1px solid #FFF;
+                    border-radius: 9px;
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(2px);
+                }
+            }
+        }
 
         .circle1 {
             width: 100vw;
             height: 50vw;
-            border: 1px solid black;
+            border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: relative;
 
-            .setcount {
-                margin-bottom: -50px;
-                height: 100px;
-                width: 50%;
-                transform-origin: right;
-                animation: set1 15s linear infinite normal;
-                transform: rotate(135deg);
-                position: absolute;
-                bottom: 0;
-
-                &.setcont2 {
-                    transform: rotate(0deg);
-                    animation-delay: 4s;
-
-                    img {
-                        left: -30px;
-                    }
-                }
-
-                img {
-                    position: absolute;
-                    left: -40px;
-                    transform: rotate(45deg);
-                }
-            }
         }
 
         .circle2 {
-            width: 80vw;
-            height: 40vw;
-            border: 1px solid black;
+            width: 90vw;
+            height: 45vw;
+            border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
             bottom: 0;
@@ -751,64 +769,72 @@ a {
             transform: translateX(-50%);
 
             .setcount {
-                margin-bottom: -50px;
-                height: 100px;
-                width: 50%;
-                transform-origin: right;
-                // animation: set2 15s linear infinite normal;
-                // transform: rotate(135deg);
-                position: absolute;
-                bottom: 0;
-                border: 1px solid red;
-
-                &.setcont2 {
-                    transform: rotate(0deg);
-                    animation-delay: 4s;
-
-                    img {
-                        left: -30px;
-                    }
-                }
-
-                &.setcont3 {
-                    transform: rotate(0deg);
-                    animation-delay: 8s;
-
-                    img {
-                        left: -30px;
-                    }
-                }
-
-                img {
-                    position: absolute;
-                    left: -40px;
-                    transform: rotate(45deg);
-                }
+                animation-delay: 5s;
             }
         }
 
         .circle3 {
-            width: 60vw;
-            height: 30vw;
-            border: 1px solid black;
+            width: 80vw;
+            height: 40vw;
+            border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+
+            .setcount {
+                animation-delay: 3s;
+            }
         }
 
         .circle4 {
-            width: 40vw;
-            height: 20vw;
-            border: 1px solid black;
+            width: 70vw;
+            height: 35vw;
+            border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            background: #040C1F;
-            box-shadow: #040C1F 0px -7px 36px 0px, #040C1F 0px 0px 0px 1px;
+
+            .setcount {
+                animation-delay: 9s;
+            }
+
+        }
+
+        .circle5 {
+            width: 60vw;
+            height: 30vw;
+            border: 1px solid rgba(0, 0, 0, 0.062);
+            border-radius: 999999px 999999px 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+        }
+
+        .circle6 {
+            width: 50vw;
+            height: 25vw;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                border-radius: 999999px 999999px 0 0;
+                margin: auto;
+                display: block;
+                width: 101%;
+                height: 203%;
+                // margin-top: -16px;
+                // box-shadow: #040C1F 0px -7px 36px 0px, #040C1F 0px 0px 0px 1px;
+            }
+
         }
     }
 }
@@ -822,6 +848,11 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+
+        background: #000c1f url(./images/expbanner.webp);
+        background-size: cover;
 
         .sec-title {
             color: white;
@@ -872,22 +903,88 @@ a {
     }
 }
 
+.processsec {
+    padding: 4vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 3vw;
+
+    .prleft {
+        .titlebox {
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    .prright {
+        display: flex;
+
+        .astline {
+            width: 35%;
+            position: relative;
+
+            .aline {
+                width: .3vw;
+                height: 100%;
+                background-color: #D9D9D9;
+                position: relative;
+
+            }
+
+            .ltastr {
+                position: absolute;
+                top: 0;
+                left: -15%;
+                z-index: -1;
+
+                svg {
+                    width: 10vw;
+                }
+            }
+
+        }
+
+        .prtopics {
+            width: 65%;
+
+            h3 {
+                font-size: 2vw;
+                font-weight: 500;
+                color: $black;
+                padding: 5vw 0;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -16.4vw;
+                    top: 50%;
+                    width: 2vw;
+                    height: 2vw;
+                    background-color: #dadada;
+                    border-radius: 100%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
 
 
 // About page style start ----------------------------------------------------------------------------------
 
 .abthero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     align-items: center;
     background: url(./images/abtbg.webp);
     // background-color: #071131;
     background-position: center center;
     background-size: cover;
-    min-height: 90vh;
     position: relative;
     overflow: hidden;
-    padding: 4vw;
+    padding: 10vw 4vw;
 
     .abtmoon {
         position: absolute;
@@ -916,76 +1013,73 @@ a {
         margin: auto;
 
         .imggrid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            position: relative;
 
-            .imgg1 {
+            .astronaut {
+                border: 1px solid red;
 
-                .img1,
-                .img2 {
-                    width: 10vw;
-                    height: 10vw;
-                    background-color: white;
-                    border-radius: 100%;
-                    margin-bottom: 1vw;
+                svg {
+                    width: 30vw;
                 }
-
             }
 
-            .img3 {
-                width: 11vw;
-                height: 21vw;
-                background-color: white;
-                border-radius: 1888888888888888px;
-                margin-left: 1vw;
+            .laptop {
+                position: absolute;
+                width: 10vw;
+                top: 40%;
+            }
+
+            .astbg {
+                position: absolute;
+                z-index: 2;
+
+                svg {
+                    width: 30vw;
+                }
             }
         }
 
-    }
-}
-
-.abtdevider {
-    background: linear-gradient(180deg, rgba(7, 17, 49, 1) 0%, rgba(24, 24, 24, 1) 100%);
-
-    svg {
-        width: 100%;
-
-        &.d2 {
-
-            margin-top: -7vw;
-        }
     }
 }
 
 .abtcontent {
     background: $black url(./images/abtbg2.webp);
-    padding: 15vw 4vw;
+    background-size: cover;
+    padding: 4vw;
     color: white;
     position: relative;
+    min-height: 700px;
 
     .titlebox {
-        max-width: 60vw;
         margin: auto;
+        position: sticky;
+        top: 0;
+        margin-bottom: 4vw;
+        backdrop-filter: blur(2px);
 
         .sec-title {
             color: $orange;
         }
     }
 
-    .astlp {
-        position: absolute;
-        width: 20vw;
-        bottom: -5%;
+    .skwpara {
+        max-width: 60vw;
+        margin: auto;
+        
+        p {
+            text-align: center;
+            font-size: 2vw;
 
-    }
-
-    .rightpattern {
-        position: absolute;
-        right: 0;
-        top: -10%;
-
-        svg {
-            width: 45vw;
+            div {
+                background: linear-gradient(to right,
+                        rgb(255, 255, 255) 50%,
+                        rgb(37, 37, 37) 50%);
+                background-size: 200% 100%;
+                background-position-x: 100%;
+                color: transparent;
+                background-clip: text;
+                text-align: center;
+            }
         }
     }
 }
@@ -999,12 +1093,14 @@ a {
         margin: 2vw 0;
         gap: 1vw;
 
-        .mission{
+        .mission {
             text-align: right;
         }
 
-        .mission,.vision{
+        .mission,
+        .vision {
             padding-top: 3vw;
+
             .m_icon {
                 svg {
                     width: 3vw;
@@ -1017,40 +1113,65 @@ a {
                 color: $orange;
             }
 
-            .m_para{
+            .m_para {
                 color: #808080;
             }
         }
 
-        .v_img{
-            svg{
+        .v_img {
+            svg {
                 animation: vrotate 100s linear infinite normal;
             }
         }
-        
-        
+
+
     }
 }
 
-.numbersec{
+.numbersec {
     padding: 4vw;
-    background: $blue url(./images/numberbg.webp);
+    background: $blue;
     background-size: cover;
     background-position: center center;
     background-blend-mode: multiply;
 
-    .titlebox{
-        .sec-title{
+    .titlebox {
+        .sec-title {
             color: $orange;
         }
     }
 
-    .numberboxes{
+    .numberboxes {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 3vw;
+        margin-top: 4vw;
+
+        .n_box {
+            padding: 2vw 1vw;
+            border: 1px solid red;
+            display: flex;
+            gap: 2vw;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid #FFF;
+            background: linear-gradient(260deg, rgba(255, 255, 255, 0.25) 1.32%, rgba(255, 255, 255, 0.00) 100%);
+            backdrop-filter: blur(10px);
+
+            p {
+                color: #B2D1FF;
+                align-self: end;
+                text-align: center;
+            }
+
+            h3 {
+                color: transparent;
+                -webkit-text-stroke: 2px $orange;
+                font-size: 3vw;
+            }
+        }
     }
 }
-
 
 
 
@@ -1233,7 +1354,7 @@ footer {
 }
 
 @keyframes vrotate {
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }

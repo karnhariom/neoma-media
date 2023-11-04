@@ -34,17 +34,26 @@ gsap.from(".innerrocket", {
     ease: "none"
 });
 
-const ctl = gsap.timeline();
-
-ctl.to(".circle2 .setcont1", {
-    rotate: 180,
+gsap.to(".ltastr", {
     scrollTrigger: {
-        pin: true,
-        trigger: ".appr_grp",
-        scrub: 5,
-        scroller: "body",
-        // pin: true
+        trigger: ".ltastr",
+        scrub: 3,
+        start: "500px bottom",
+        end: "bottom top"
     },
+
+    y: 700,
+    ease: "none"
+});
+
+gsap.to(".aline", {
+    scrollTrigger: {
+        trigger: ".aline",
+        scrub: 3,
+        start: "500px bottom",
+        end: "bottom top"
+    },
+    backgroundColor: 'black'
 });
 
 
@@ -56,6 +65,35 @@ gsap.from(".l_box img", {
     duration: 3,
     scrub: 1
 });
+
+// gsap.to(".skwpara p", {
+//     scrollTrigger: {
+//         trigger: ".skwpara",
+//         scrub: 3,
+//         start: "500px bottom",
+//         end: "bottom top",
+//         pin: true
+//     },
+//     scale: 1.2,
+// });
+
+const split = new SplitText(".skwpara p", { type: "lines" });
+
+split.lines.forEach((target) => {
+  gsap.to(target, {
+    backgroundPositionX: 0,
+    skew: 20,
+    ease: "ease",
+    scrollTrigger: {
+      trigger: target,
+      scrub: 1,
+      start: "top center",
+      end: "bottom center",
+      duration: 1
+    }
+  });
+});
+
 
 
 // video button movement 
@@ -106,11 +144,3 @@ hamburger.addEventListener("click", openmenu);
 function openmenu() {
     navmenu.classList.toggle("navopen");
 }
-
-jQuery('.odometer').appear(function (e) {
-    var odo = jQuery(".odometer");
-    odo.each(function () {
-        var countNumber = jQuery(this).attr("data-count");
-        jQuery(this).html(countNumber);
-    });
-});
