@@ -39,7 +39,7 @@ html {
     width: 0px;
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -48,7 +48,9 @@ a {
     font-size: 18px;
 }
 
-p,li,a {
+p,
+li,
+a {
     font-weight: 400;
     font-size: 1.3vw;
     line-height: 1.5em;
@@ -127,19 +129,6 @@ p,li,a {
             }
 
             &:hover {
-
-                a {
-                    .navico {
-                        transform: translate(-50%, -50%) scale(1);
-                    }
-
-                    .navtext {
-                        opacity: 0;
-                    }
-                }
-            }
-
-            &.active {
 
                 a {
                     .navico {
@@ -654,7 +643,7 @@ p,li,a {
 // contact section end 
 
 
-// Service page styling -----------------------------------------------------------------
+// Service page styling -------------------------------------------------------------------------------
 
 
 // service hero section style start 
@@ -734,11 +723,11 @@ p,li,a {
                 position: absolute;
                 bottom: 0;
 
-                &.setcont2{
+                &.setcont2 {
                     transform: rotate(0deg);
                     animation-delay: 4s;
 
-                    img{
+                    img {
                         left: -30px;
                     }
                 }
@@ -766,25 +755,26 @@ p,li,a {
                 height: 100px;
                 width: 50%;
                 transform-origin: right;
-                animation: set2 15s linear infinite normal;
-                transform: rotate(135deg);
+                // animation: set2 15s linear infinite normal;
+                // transform: rotate(135deg);
                 position: absolute;
                 bottom: 0;
+                border: 1px solid red;
 
-                &.setcont2{
+                &.setcont2 {
                     transform: rotate(0deg);
                     animation-delay: 4s;
 
-                    img{
+                    img {
                         left: -30px;
                     }
                 }
 
-                &.setcont3{
+                &.setcont3 {
                     transform: rotate(0deg);
                     animation-delay: 8s;
 
-                    img{
+                    img {
                         left: -30px;
                     }
                 }
@@ -823,54 +813,55 @@ p,li,a {
     }
 }
 
-.expertise{
+.expertise {
     padding: 4vw;
     background: #000c1f url(./images/expbanner.webp);
     background-size: cover;
 
-    .titlebox{
+    .titlebox {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .sec-title{
+        .sec-title {
             color: white;
             display: flex;
             align-items: center;
 
-            svg{
+            svg {
                 width: 8vw;
             }
         }
     }
 
-    .expsec{
+    .expsec {
         color: white;
 
-        .singleexp{
+        .singleexp {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             padding: 2vw 0;
             align-items: center;
 
-            .expcont{
-                .exsec{
+            .expcont {
+                .exsec {
                     margin-bottom: 25px;
-                    h4{
+
+                    h4 {
                         font-size: 2vw;
                         margin-bottom: 15px;
                     }
 
-                    .s_list{
-                        li{
+                    .s_list {
+                        li {
                             margin-bottom: 15px;
                         }
                     }
                 }
             }
 
-            .expimg{
-                .img{
+            .expimg {
+                .img {
                     width: 80%;
                     height: 600px;
                     background-color: red;
@@ -883,7 +874,182 @@ p,li,a {
 
 
 
+// About page style start ----------------------------------------------------------------------------------
 
+.abthero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: url(./images/abtbg.webp);
+    // background-color: #071131;
+    background-position: center center;
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    padding: 4vw;
+
+    .abtmoon {
+        position: absolute;
+        top: -55px;
+        left: 0;
+        width: 16vw;
+        transform: rotate(20deg);
+    }
+
+    .leftabt {
+
+        h3 {
+            color: white;
+            font-size: 6vw;
+            position: relative;
+            z-index: 1;
+
+            &.stroked {
+                -webkit-text-stroke: 1px $orange;
+                color: transparent;
+            }
+        }
+    }
+
+    .rightabt {
+        margin: auto;
+
+        .imggrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .imgg1 {
+
+                .img1,
+                .img2 {
+                    width: 10vw;
+                    height: 10vw;
+                    background-color: white;
+                    border-radius: 100%;
+                    margin-bottom: 1vw;
+                }
+
+            }
+
+            .img3 {
+                width: 11vw;
+                height: 21vw;
+                background-color: white;
+                border-radius: 1888888888888888px;
+                margin-left: 1vw;
+            }
+        }
+
+    }
+}
+
+.abtdevider {
+    background: linear-gradient(180deg, rgba(7, 17, 49, 1) 0%, rgba(24, 24, 24, 1) 100%);
+
+    svg {
+        width: 100%;
+
+        &.d2 {
+
+            margin-top: -7vw;
+        }
+    }
+}
+
+.abtcontent {
+    background: $black url(./images/abtbg2.webp);
+    padding: 15vw 4vw;
+    color: white;
+    position: relative;
+
+    .titlebox {
+        max-width: 60vw;
+        margin: auto;
+
+        .sec-title {
+            color: $orange;
+        }
+    }
+
+    .astlp {
+        position: absolute;
+        width: 20vw;
+        bottom: -5%;
+
+    }
+
+    .rightpattern {
+        position: absolute;
+        right: 0;
+        top: -10%;
+
+        svg {
+            width: 45vw;
+        }
+    }
+}
+
+.visionsec {
+    padding: 4vw;
+
+    .v_content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2vw 0;
+        gap: 1vw;
+
+        .mission{
+            text-align: right;
+        }
+
+        .mission,.vision{
+            padding-top: 3vw;
+            .m_icon {
+                svg {
+                    width: 3vw;
+                }
+            }
+
+            .m_title {
+                font-size: 2vw;
+                margin: 1vw 0;
+                color: $orange;
+            }
+
+            .m_para{
+                color: #808080;
+            }
+        }
+
+        .v_img{
+            svg{
+                animation: vrotate 100s linear infinite normal;
+            }
+        }
+        
+        
+    }
+}
+
+.numbersec{
+    padding: 4vw;
+    background: $blue url(./images/numberbg.webp);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+
+    .titlebox{
+        .sec-title{
+            color: $orange;
+        }
+    }
+
+    .numberboxes{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 
 
@@ -1066,6 +1232,12 @@ footer {
     }
 }
 
+@keyframes vrotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 // keyframes end 
 
@@ -1083,7 +1255,8 @@ footer {
             width: 100%;
             flex-direction: column;
             left: 0;
-            height: calc(100vh - 70px);
+            min-height: calc(100vh - 70px);
+            padding: 40px 0;
             background-color: black;
             top: 70px;
             z-index: 99;
@@ -1102,6 +1275,7 @@ footer {
                     .navtext {
                         opacity: 1;
                         transition: all 0.3s linear;
+                        font-size: 20px;
                     }
 
                     .navico {
@@ -1111,19 +1285,6 @@ footer {
                 }
 
                 &:hover {
-
-                    a {
-                        .navico {
-                            transform: none;
-                        }
-
-                        .navtext {
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                &.active {
 
                     a {
                         .navico {

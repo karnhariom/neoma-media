@@ -34,6 +34,20 @@ gsap.from(".innerrocket", {
     ease: "none"
 });
 
+const ctl = gsap.timeline();
+
+ctl.to(".circle2 .setcont1", {
+    rotate: 180,
+    scrollTrigger: {
+        pin: true,
+        trigger: ".appr_grp",
+        scrub: 5,
+        scroller: "body",
+        // pin: true
+    },
+});
+
+
 // client logo amimation 
 
 gsap.from(".l_box img", {
@@ -49,22 +63,22 @@ const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-button');
 
-videoContainer.addEventListener('mouseenter', () => {
+videoContainer?.addEventListener('mouseenter', () => {
     playPauseButton.style.display = 'grid';
 });
 
-videoContainer.addEventListener('mousemove', (e) => {
+videoContainer?.addEventListener('mousemove', (e) => {
     const x = e.clientX - videoContainer.getBoundingClientRect().left - 25;
     const y = e.clientY - videoContainer.getBoundingClientRect().top - 35;
     playPauseButton.style.left = `${x}px`;
     playPauseButton.style.top = `${y}px`;
 });
 
-videoContainer.addEventListener('mouseleave', () => {
+videoContainer?.addEventListener('mouseleave', () => {
     playPauseButton.style.display = 'none';
 });
 
-playPauseButton.addEventListener('click', () => {
+playPauseButton?.addEventListener('click', () => {
     if (video.paused) {
         video.play();
         playPauseButton.innerHTML = '<i class="fi fi-rr-pause"></i>';
@@ -92,3 +106,11 @@ hamburger.addEventListener("click", openmenu);
 function openmenu() {
     navmenu.classList.toggle("navopen");
 }
+
+jQuery('.odometer').appear(function (e) {
+    var odo = jQuery(".odometer");
+    odo.each(function () {
+        var countNumber = jQuery(this).attr("data-count");
+        jQuery(this).html(countNumber);
+    });
+});

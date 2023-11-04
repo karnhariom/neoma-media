@@ -41,7 +41,9 @@ a {
   font-size: 18px;
 }
 
-p, li, a {
+p,
+li,
+a {
   font-weight: 400;
   font-size: 1.3vw;
   line-height: 1.5em;
@@ -112,12 +114,6 @@ p, li, a {
   transform: translate(-50%, -50%) scale(1);
 }
 .topheader .navmneu .nalink:hover a .navtext {
-  opacity: 0;
-}
-.topheader .navmneu .nalink.active a .navico {
-  transform: translate(-50%, -50%) scale(1);
-}
-.topheader .navmneu .nalink.active a .navtext {
   opacity: 0;
 }
 .topheader .hamburger {
@@ -613,10 +609,9 @@ p, li, a {
   height: 100px;
   width: 50%;
   transform-origin: right;
-  animation: set2 15s linear infinite normal;
-  transform: rotate(135deg);
   position: absolute;
   bottom: 0;
+  border: 1px solid red;
 }
 .approach .appr_grp .circle2 .setcount.setcont2 {
   transform: rotate(0deg);
@@ -702,6 +697,140 @@ p, li, a {
   height: 600px;
   background-color: red;
   margin: auto;
+}
+
+.abthero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: url(./images/abtbg.webp);
+  background-position: center center;
+  background-size: cover;
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+  padding: 4vw;
+}
+.abthero .abtmoon {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 16vw;
+  transform: rotate(20deg);
+}
+.abthero .leftabt h3 {
+  color: white;
+  font-size: 6vw;
+  position: relative;
+  z-index: 1;
+}
+.abthero .leftabt h3.stroked {
+  -webkit-text-stroke: 1px #FEBA02;
+  color: transparent;
+}
+.abthero .rightabt {
+  margin: auto;
+}
+.abthero .rightabt .imggrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.abthero .rightabt .imggrid .imgg1 .img1,
+.abthero .rightabt .imggrid .imgg1 .img2 {
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  border-radius: 100%;
+  margin-bottom: 1vw;
+}
+.abthero .rightabt .imggrid .img3 {
+  width: 11vw;
+  height: 21vw;
+  background-color: white;
+  border-radius: 1888888888888888px;
+  margin-left: 1vw;
+}
+
+.abtdevider {
+  background: linear-gradient(180deg, rgb(7, 17, 49) 0%, rgb(24, 24, 24) 100%);
+}
+.abtdevider svg {
+  width: 100%;
+}
+.abtdevider svg.d2 {
+  margin-top: -7vw;
+}
+
+.abtcontent {
+  background: #181818 url(./images/abtbg2.webp);
+  padding: 15vw 4vw;
+  color: white;
+  position: relative;
+}
+.abtcontent .titlebox {
+  max-width: 60vw;
+  margin: auto;
+}
+.abtcontent .titlebox .sec-title {
+  color: #FEBA02;
+}
+.abtcontent .astlp {
+  position: absolute;
+  width: 20vw;
+  bottom: -5%;
+}
+.abtcontent .rightpattern {
+  position: absolute;
+  right: 0;
+  top: -10%;
+}
+.abtcontent .rightpattern svg {
+  width: 45vw;
+}
+
+.visionsec {
+  padding: 4vw;
+}
+.visionsec .v_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2vw 0;
+  gap: 1vw;
+}
+.visionsec .v_content .mission {
+  text-align: right;
+}
+.visionsec .v_content .mission, .visionsec .v_content .vision {
+  padding-top: 3vw;
+}
+.visionsec .v_content .mission .m_icon svg, .visionsec .v_content .vision .m_icon svg {
+  width: 3vw;
+}
+.visionsec .v_content .mission .m_title, .visionsec .v_content .vision .m_title {
+  font-size: 2vw;
+  margin: 1vw 0;
+  color: #FEBA02;
+}
+.visionsec .v_content .mission .m_para, .visionsec .v_content .vision .m_para {
+  color: #808080;
+}
+.visionsec .v_content .v_img svg {
+  animation: vrotate 100s linear infinite normal;
+}
+
+.numbersec {
+  padding: 4vw;
+  background: #003585 url(./images/numberbg.webp);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+.numbersec .titlebox .sec-title {
+  color: #FEBA02;
+}
+.numbersec .numberboxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 footer {
@@ -835,6 +964,11 @@ footer .c_footer ul li a {
     transform: rotate(0deg);
   }
 }
+@keyframes vrotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 900px) {
   .topheader {
     position: relative;
@@ -845,7 +979,8 @@ footer .c_footer ul li a {
     width: 100%;
     flex-direction: column;
     left: 0;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    padding: 40px 0;
     background-color: black;
     top: 70px;
     z-index: 99;
@@ -864,6 +999,7 @@ footer .c_footer ul li a {
   .topheader .navmneu .nalink a .navtext {
     opacity: 1;
     transition: all 0.3s linear;
+    font-size: 20px;
   }
   .topheader .navmneu .nalink a .navico {
     position: static;
@@ -873,12 +1009,6 @@ footer .c_footer ul li a {
     transform: none;
   }
   .topheader .navmneu .nalink:hover a .navtext {
-    opacity: 1;
-  }
-  .topheader .navmneu .nalink.active a .navico {
-    transform: none;
-  }
-  .topheader .navmneu .nalink.active a .navtext {
     opacity: 1;
   }
   .topheader .navmneu.navopen {
