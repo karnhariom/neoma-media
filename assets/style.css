@@ -789,13 +789,6 @@ a {
   overflow: hidden;
   padding: 10vw 4vw;
 }
-.abthero .abtmoon {
-  position: absolute;
-  top: -55px;
-  left: 0;
-  width: 16vw;
-  transform: rotate(20deg);
-}
 .abthero .leftabt h3 {
   color: white;
   font-size: 6vw;
@@ -806,14 +799,11 @@ a {
   -webkit-text-stroke: 1px #FEBA02;
   color: transparent;
 }
-.abthero .rightabt {
-  margin: auto;
-}
 .abthero .rightabt .imggrid {
   position: relative;
 }
 .abthero .rightabt .imggrid .astronaut {
-  border: 1px solid red;
+  animation: abt_ast 4s ease-in-out infinite alternate;
 }
 .abthero .rightabt .imggrid .astronaut svg {
   width: 30vw;
@@ -822,10 +812,12 @@ a {
   position: absolute;
   width: 10vw;
   top: 40%;
+  animation: abt_ast 4s ease-in-out infinite alternate;
 }
 .abthero .rightabt .imggrid .astbg {
   position: absolute;
   z-index: 2;
+  animation: abt_bg 4s ease-in-out infinite alternate;
 }
 .abthero .rightabt .imggrid .astbg svg {
   width: 30vw;
@@ -1075,6 +1067,22 @@ footer .c_footer ul li a {
 @keyframes vrotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes abt_ast {
+  0% {
+    transform: translate(1vw, -1vw);
+  }
+  100% {
+    transform: translate(-1vw, 1vw);
+  }
+}
+@keyframes abt_bg {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }
 @media only screen and (max-width: 900px) {

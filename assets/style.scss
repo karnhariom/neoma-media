@@ -986,14 +986,6 @@ a {
     overflow: hidden;
     padding: 10vw 4vw;
 
-    .abtmoon {
-        position: absolute;
-        top: -55px;
-        left: 0;
-        width: 16vw;
-        transform: rotate(20deg);
-    }
-
     .leftabt {
 
         h3 {
@@ -1010,13 +1002,13 @@ a {
     }
 
     .rightabt {
-        margin: auto;
 
         .imggrid {
             position: relative;
 
             .astronaut {
-                border: 1px solid red;
+                // border: 1px solid red;
+                animation: abt_ast 4s ease-in-out infinite alternate;
 
                 svg {
                     width: 30vw;
@@ -1027,11 +1019,13 @@ a {
                 position: absolute;
                 width: 10vw;
                 top: 40%;
+                animation: abt_ast 4s ease-in-out infinite alternate;
             }
 
             .astbg {
                 position: absolute;
                 z-index: 2;
+                animation: abt_bg 4s ease-in-out infinite alternate;
 
                 svg {
                     width: 30vw;
@@ -1359,6 +1353,24 @@ footer {
     }
 }
 
+@keyframes abt_ast {
+    0%{
+        transform: translate(1vw, -1vw);
+    }
+
+    100%{
+        transform: translate(-1vw, 1vw);
+    }
+}
+
+@keyframes abt_bg {
+    0%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
 
 // keyframes end 
 

@@ -66,17 +66,6 @@ gsap.from(".l_box img", {
     scrub: 1
 });
 
-// gsap.to(".skwpara p", {
-//     scrollTrigger: {
-//         trigger: ".skwpara",
-//         scrub: 3,
-//         start: "500px bottom",
-//         end: "bottom top",
-//         pin: true
-//     },
-//     scale: 1.2,
-// });
-
 const split = new SplitText(".skwpara p", { type: "lines" });
 
 split.lines.forEach((target) => {
