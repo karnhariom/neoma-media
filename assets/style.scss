@@ -45,7 +45,7 @@ li {
 
 a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.3vw;
 }
 
 p,
@@ -66,9 +66,9 @@ a {
 }
 
 .btn {
-    padding: 18px 30px;
+    padding: 1vw 3vw;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.3vw;
     font-weight: 400;
     color: black;
 }
@@ -79,7 +79,7 @@ a {
 
 .y_btn {
     background-color: $orange;
-    border-radius: 100px;
+    border-radius: 10000px;
 
     span {
         margin: 10px;
@@ -89,7 +89,7 @@ a {
 // topheader section style start 
 .topheader {
     background-color: $black;
-    padding: 10px 30px;
+    padding: 1vw 1.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +97,7 @@ a {
     .logo {
         a {
             img {
-                height: 56px;
+                height: 3.7vw;
             }
         }
     }
@@ -105,7 +105,7 @@ a {
     .navmneu {
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: 2vw;
 
         .nalink {
             list-style: none;
@@ -148,7 +148,7 @@ a {
 
         i {
             color: white;
-            font-size: 25px;
+            font-size: 2vw;
         }
     }
 }
@@ -249,7 +249,7 @@ a {
 // video section start 
 .videosection {
     // background: $black;
-    padding: 40px;
+    padding: 4vw;
 
     #video-container {
         position: relative;
@@ -284,7 +284,7 @@ a {
         position: relative;
 
         .y_btn {
-            margin: 10px;
+            margin: 1vw;
         }
 
         .rocket {
@@ -502,12 +502,12 @@ a {
         .uspsleft {
             .titlebox {
                 .sec-title {
-                    margin-bottom: 20px;
+                    margin-bottom: 1.2vw;
                     color: $orange;
                 }
 
                 p {
-                    margin-bottom: 30px;
+                    margin-bottom: 2vw;
                     color: white;
                 }
             }
@@ -530,60 +530,76 @@ a {
 .testimonial {
     padding: 4vw;
 
-    .swiper {
-        width: 80%;
-        height: 100%;
+    .testgrid{
+        display: flex;
+        align-items: center;
+        max-width: 80%;
+        margin: auto;
+        
+        .testimg{
+            width: 30%;
 
-        .revbox {
-            padding: 2vw;
-
-            p {
-                font-size: 26px;
-                line-height: 1.4em;
+            svg{
+                width: 16vw;
             }
-
-            h3 {
-                font-size: 35px;
-                color: $orange;
-                margin-top: 30px;
-            }
-
         }
-
-        .s_buttons {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            gap: 20px;
-            background-color: white;
-
-            .swiper-button-next,
-            .swiper-button-prev {
-                position: static;
-                width: 45px;
-                height: 45px;
-                border: 2px solid $blue;
-                border-radius: 1000px;
-                display: grid;
-                place-content: center;
-                transition: all 0.3s linear;
-
-                &:hover {
-                    width: 60px;
+        
+        .swiper {
+            width: 70%;
+            height: 100%;
+    
+            .revbox {
+                padding: 2vw;
+    
+                p {
+                    // font-size: 26px;
+                    line-height: 1.4em;
                 }
-
-                &::after {
-                    display: none;
-                }
-
-                i {
+    
+                h3 {
+                    font-size: 2vw;
                     color: $orange;
-                    font-size: 20px;
+                    margin-top: 30px;
+                }
+    
+            }
+    
+            .s_buttons {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                gap: 1.5vw;
+                background-color: white;
+    
+                .swiper-button-next,
+                .swiper-button-prev {
+                    position: static;
+                    width: 3.8vw;
+                    height: 3.8vw;
+                    border: 2px solid $blue;
+                    border-radius: 1000px;
+                    display: grid;
+                    place-content: center;
+                    transition: all 0.3s linear;
+    
+                    &:hover {
+                        width: 5.5vw;
+                    }
+    
+                    &::after {
+                        display: none;
+                    }
+    
+                    i {
+                        color: $orange;
+                        // font-size: 20px;
+                    }
                 }
             }
         }
     }
+
 }
 
 // testimonial section end
@@ -592,7 +608,7 @@ a {
 .contactsection {
     padding: 4vw;
     padding-top: 0;
-    padding-bottom: 200px;
+    padding-bottom: 15vw;
     overflow-y: hidden;
     margin-top: 4vw;
 
@@ -631,8 +647,8 @@ a {
         .bot_astr {
             display: flex;
             justify-content: center;
-            margin-top: 200px;
-            margin-bottom: -200px;
+            margin-top: 10vw;
+            margin-bottom: -15vw;
 
             svg {
                 width: 20vw;
@@ -680,6 +696,10 @@ a {
         left: 2vw;
         animation: hangingastro 3s ease-in-out infinite alternate;
         transform-origin: top;
+
+        svg{
+            width: 18vw;
+        }
     }
 
     .halfmoon {
@@ -696,22 +716,21 @@ a {
         padding: 4vw;
 
         .sec_desc {
-            max-width: 700px;
+            max-width: 50vw;
             margin-top: 20px;
         }
     }
 
     .appr_grp {
-        margin-top: 60px;
         overflow: visible;
-        padding-top: 30px;
+        margin-top: 5vw;
         position: relative;
         transform: scale(1.1);
         z-index: -1;
 
         .setcount {
-            margin-bottom: -50px;
-            height: 100px;
+            // margin-bottom: -50px;
+            // height: 100px;
             width: 50%;
             transform-origin: right;
             animation: set1 15s linear infinite normal;
@@ -728,7 +747,7 @@ a {
 
             .settext {
                 position: absolute;
-                padding: 10px;
+                padding: 1vw;
                 background: url(./images/tframe.webp);
                 background-size: cover;
                 color: white;
@@ -880,22 +899,20 @@ a {
 
                     h4 {
                         font-size: 2vw;
-                        margin-bottom: 15px;
+                        margin-bottom: 1vw;
                     }
 
                     .s_list {
                         li {
-                            margin-bottom: 15px;
+                            margin-bottom: 1.2vw;
                         }
                     }
                 }
             }
 
             .expimg {
-                .img {
+                img {
                     width: 80%;
-                    height: 600px;
-                    background-color: red;
                     margin: auto;
                 }
             }
@@ -1169,6 +1186,143 @@ a {
 
 
 
+// case-study page stylinig-----------------------------------------------------------------------------
+
+.casehero{
+    padding: 6vw 4vw;
+    display: flex;
+    align-items: center;
+    background: url(./images/csbg.webp);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+
+    h3 {
+        color: $orange;
+        font-size: 6vw;
+    }
+
+    .readastro{
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+
+        svg{
+            width: 16vw;
+        }
+    }
+}
+
+.cases{
+    background-color: black;
+    padding: 4vw;
+
+    .s_case{
+        .c_top{
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            align-items: center;
+
+            .cimg{
+                width: 60vw;
+                overflow: hidden;
+
+                img{
+                    
+                }
+            }
+
+            .ctext{
+                h3{
+                    color: $orange;
+                    font-size: 6vw;
+                    margin-bottom: 3vw;
+                }
+
+                .pstm{
+                    h5{
+                        display: flex;
+                        gap: 1vw;
+                        align-items: center;
+                        color: white;
+                        font-size: 2vw;
+                        font-weight: 400;
+                        margin-bottom: 1.7vw;
+
+                        span{
+                            svg{
+                                width: 3vw;
+                            }
+                        }
+                    }
+
+                    p{
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .c_bottom{
+
+            .solnbox{
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                padding: 2vw 0;
+
+                .sstm{
+                    h5{
+                        display: flex;
+                        gap: 1vw;
+                        align-items: center;
+                        color: white;
+                        font-size: 2vw;
+                        font-weight: 400;
+                        margin-bottom: 1.7vw;
+
+                        span{
+                            svg{
+                                width: 3vw;
+                            }
+                        }
+                    }
+
+                    p{
+                        color: white;
+                    }
+
+                    .btn{
+                        margin-top: 1vw;
+                    }
+                }
+
+                .stags{
+                    padding-left: 8vw;
+                    .sstag{
+                        background-color: #2c2c2c;
+                        padding: 1vw;
+                        display: flex;
+                        gap: 1vw;
+                        border-radius: 10px;
+                        margin-bottom: 1vw;
+                        align-items: center;
+
+                        svg{
+                            width: 3vw;
+                        }
+
+                        p{
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
 
 
 
@@ -1229,6 +1383,10 @@ footer {
                 right: 0;
                 background: linear-gradient(180deg, #181818 0%, rgba(24, 24, 24, 0.00) 110.94%);
             }
+
+            .f_logo{
+                width: 20vw;
+            }
         }
 
         .f_links {
@@ -1241,8 +1399,8 @@ footer {
 
                 h3 {
                     color: $blue;
-                    font-size: 24px;
-                    margin-bottom: 20px;
+                    font-size: 2vw;
+                    margin-bottom: 1vw;
                 }
 
                 ul {

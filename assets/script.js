@@ -20,6 +20,38 @@ gsap.from(".introvideo", {
     duration: 3
 });
 
+const videoContainer = document.getElementById('video-container');
+const video = document.getElementById('video');
+const playPauseButton = document.getElementById('play-pause-button');
+
+videoContainer?.addEventListener('mouseenter', () => {
+    playPauseButton.style.display = 'grid';
+});
+
+videoContainer?.addEventListener('mousemove', (e) => {
+    const x = e.clientX - videoContainer.getBoundingClientRect().left - 25;
+    const y = e.clientY - videoContainer.getBoundingClientRect().top - 35;
+    playPauseButton.style.left = `${x}px`;
+    playPauseButton.style.top = `${y}px`;
+});
+
+videoContainer?.addEventListener('mouseleave', () => {
+    playPauseButton.style.display = 'none';
+});
+
+playPauseButton?.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playPauseButton.innerHTML = '<i class="fi fi-rr-pause"></i>';
+    } else {
+        video.pause();
+        playPauseButton.innerHTML = '<i class="fi fi-rr-play"></i>';
+    }
+});
+
+// video button movement 
+
+
 gsap.from(".innerrocket", {
     scrollTrigger: {
         trigger: ".innerrocket",
@@ -66,56 +98,6 @@ gsap.from(".l_box img", {
     scrub: 1
 });
 
-const split = new SplitText(".skwpara p", { type: "lines" });
-
-split.lines.forEach((target) => {
-  gsap.to(target, {
-    backgroundPositionX: 0,
-    skew: 20,
-    ease: "ease",
-    scrollTrigger: {
-      trigger: target,
-      scrub: 1,
-      start: "top center",
-      end: "bottom center",
-      duration: 1
-    }
-  });
-});
-
-
-
-// video button movement 
-const videoContainer = document.getElementById('video-container');
-const video = document.getElementById('video');
-const playPauseButton = document.getElementById('play-pause-button');
-
-videoContainer?.addEventListener('mouseenter', () => {
-    playPauseButton.style.display = 'grid';
-});
-
-videoContainer?.addEventListener('mousemove', (e) => {
-    const x = e.clientX - videoContainer.getBoundingClientRect().left - 25;
-    const y = e.clientY - videoContainer.getBoundingClientRect().top - 35;
-    playPauseButton.style.left = `${x}px`;
-    playPauseButton.style.top = `${y}px`;
-});
-
-videoContainer?.addEventListener('mouseleave', () => {
-    playPauseButton.style.display = 'none';
-});
-
-playPauseButton?.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        playPauseButton.innerHTML = '<i class="fi fi-rr-pause"></i>';
-    } else {
-        video.pause();
-        playPauseButton.innerHTML = '<i class="fi fi-rr-play"></i>';
-    }
-});
-
-
 // testimonial section 
 
 var swiper = new Swiper(".revSwiper", {
@@ -133,3 +115,20 @@ hamburger.addEventListener("click", openmenu);
 function openmenu() {
     navmenu.classList.toggle("navopen");
 }
+
+const split = new SplitText(".skwpara p", { type: "lines" });
+
+split.lines.forEach((target) => {
+  gsap.to(target, {
+    backgroundPositionX: 0,
+    skew: 20,
+    ease: "ease",
+    scrollTrigger: {
+      trigger: target,
+      scrub: 1,
+      start: "top center",
+      end: "bottom center",
+      duration: 1
+    }
+  });
+});

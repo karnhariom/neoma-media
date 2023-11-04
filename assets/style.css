@@ -38,7 +38,7 @@ li {
 
 a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.3vw;
 }
 
 p,
@@ -58,9 +58,9 @@ a {
 }
 
 .btn {
-  padding: 18px 30px;
+  padding: 1vw 3vw;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.3vw;
   font-weight: 400;
   color: black;
 }
@@ -71,7 +71,7 @@ a {
 
 .y_btn {
   background-color: #FEBA02;
-  border-radius: 100px;
+  border-radius: 10000px;
 }
 .y_btn span {
   margin: 10px;
@@ -79,18 +79,18 @@ a {
 
 .topheader {
   background-color: #181818;
-  padding: 10px 30px;
+  padding: 1vw 1.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .topheader .logo a img {
-  height: 56px;
+  height: 3.7vw;
 }
 .topheader .navmneu {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 2vw;
 }
 .topheader .navmneu .nalink {
   list-style: none;
@@ -121,7 +121,7 @@ a {
 }
 .topheader .hamburger i {
   color: white;
-  font-size: 25px;
+  font-size: 2vw;
 }
 
 .herosection {
@@ -203,7 +203,7 @@ a {
 }
 
 .videosection {
-  padding: 40px;
+  padding: 4vw;
 }
 .videosection #video-container {
   position: relative;
@@ -230,7 +230,7 @@ a {
   position: relative;
 }
 .projects .titlebox .y_btn {
-  margin: 10px;
+  margin: 1vw;
 }
 .projects .titlebox .rocket {
   position: absolute;
@@ -403,11 +403,11 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 .usps .uspscontainer .uspsleft .titlebox .sec-title {
-  margin-bottom: 20px;
+  margin-bottom: 1.2vw;
   color: #FEBA02;
 }
 .usps .uspscontainer .uspsleft .titlebox p {
-  margin-bottom: 30px;
+  margin-bottom: 2vw;
   color: white;
 }
 .usps .uspscontainer .upsright {
@@ -421,59 +421,69 @@ a {
 .testimonial {
   padding: 4vw;
 }
-.testimonial .swiper {
-  width: 80%;
+.testimonial .testgrid {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+.testimonial .testgrid .testimg {
+  width: 30%;
+}
+.testimonial .testgrid .testimg svg {
+  width: 16vw;
+}
+.testimonial .testgrid .swiper {
+  width: 70%;
   height: 100%;
 }
-.testimonial .swiper .revbox {
+.testimonial .testgrid .swiper .revbox {
   padding: 2vw;
 }
-.testimonial .swiper .revbox p {
-  font-size: 26px;
+.testimonial .testgrid .swiper .revbox p {
   line-height: 1.4em;
 }
-.testimonial .swiper .revbox h3 {
-  font-size: 35px;
+.testimonial .testgrid .swiper .revbox h3 {
+  font-size: 2vw;
   color: #FEBA02;
   margin-top: 30px;
 }
-.testimonial .swiper .s_buttons {
+.testimonial .testgrid .swiper .s_buttons {
   position: absolute;
   bottom: 0;
   right: 0;
   display: flex;
-  gap: 20px;
+  gap: 1.5vw;
   background-color: white;
 }
-.testimonial .swiper .s_buttons .swiper-button-next,
-.testimonial .swiper .s_buttons .swiper-button-prev {
+.testimonial .testgrid .swiper .s_buttons .swiper-button-next,
+.testimonial .testgrid .swiper .s_buttons .swiper-button-prev {
   position: static;
-  width: 45px;
-  height: 45px;
+  width: 3.8vw;
+  height: 3.8vw;
   border: 2px solid #003585;
   border-radius: 1000px;
   display: grid;
   place-content: center;
   transition: all 0.3s linear;
 }
-.testimonial .swiper .s_buttons .swiper-button-next:hover,
-.testimonial .swiper .s_buttons .swiper-button-prev:hover {
-  width: 60px;
+.testimonial .testgrid .swiper .s_buttons .swiper-button-next:hover,
+.testimonial .testgrid .swiper .s_buttons .swiper-button-prev:hover {
+  width: 5.5vw;
 }
-.testimonial .swiper .s_buttons .swiper-button-next::after,
-.testimonial .swiper .s_buttons .swiper-button-prev::after {
+.testimonial .testgrid .swiper .s_buttons .swiper-button-next::after,
+.testimonial .testgrid .swiper .s_buttons .swiper-button-prev::after {
   display: none;
 }
-.testimonial .swiper .s_buttons .swiper-button-next i,
-.testimonial .swiper .s_buttons .swiper-button-prev i {
+.testimonial .testgrid .swiper .s_buttons .swiper-button-next i,
+.testimonial .testgrid .swiper .s_buttons .swiper-button-prev i {
   color: #FEBA02;
-  font-size: 20px;
 }
 
 .contactsection {
   padding: 4vw;
   padding-top: 0;
-  padding-bottom: 200px;
+  padding-bottom: 15vw;
   overflow-y: hidden;
   margin-top: 4vw;
 }
@@ -508,8 +518,8 @@ a {
 .contactsection .contactbox .bot_astr {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: -200px;
+  margin-top: 10vw;
+  margin-bottom: -15vw;
 }
 .contactsection .contactbox .bot_astr svg {
   width: 20vw;
@@ -546,6 +556,9 @@ a {
   animation: hangingastro 3s ease-in-out infinite alternate;
   transform-origin: top;
 }
+.servhero .hangingastro svg {
+  width: 18vw;
+}
 .servhero .halfmoon {
   position: absolute;
   right: 0;
@@ -556,20 +569,17 @@ a {
   padding: 4vw;
 }
 .approach .titlebox .sec_desc {
-  max-width: 700px;
+  max-width: 50vw;
   margin-top: 20px;
 }
 .approach .appr_grp {
-  margin-top: 60px;
   overflow: visible;
-  padding-top: 30px;
+  margin-top: 5vw;
   position: relative;
   transform: scale(1.1);
   z-index: -1;
 }
 .approach .appr_grp .setcount {
-  margin-bottom: -50px;
-  height: 100px;
   width: 50%;
   transform-origin: right;
   animation: set1 15s linear infinite normal;
@@ -585,7 +595,7 @@ a {
 }
 .approach .appr_grp .setcount .settext {
   position: absolute;
-  padding: 10px;
+  padding: 1vw;
   background: url(./images/tframe.webp);
   background-size: cover;
   color: white;
@@ -712,15 +722,13 @@ a {
 }
 .expertise .expsec .singleexp .expcont .exsec h4 {
   font-size: 2vw;
-  margin-bottom: 15px;
+  margin-bottom: 1vw;
 }
 .expertise .expsec .singleexp .expcont .exsec .s_list li {
-  margin-bottom: 15px;
+  margin-bottom: 1.2vw;
 }
-.expertise .expsec .singleexp .expimg .img {
+.expertise .expsec .singleexp .expimg img {
   width: 80%;
-  height: 600px;
-  background-color: red;
   margin: auto;
 }
 
@@ -933,6 +941,103 @@ a {
   font-size: 3vw;
 }
 
+.casehero {
+  padding: 6vw 4vw;
+  display: flex;
+  align-items: center;
+  background: url(./images/csbg.webp);
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+}
+.casehero h3 {
+  color: #FEBA02;
+  font-size: 6vw;
+}
+.casehero .readastro {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.casehero .readastro svg {
+  width: 16vw;
+}
+
+.cases {
+  background-color: black;
+  padding: 4vw;
+}
+.cases .s_case .c_top {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+}
+.cases .s_case .c_top .cimg {
+  width: 60vw;
+  overflow: hidden;
+}
+.cases .s_case .c_top .ctext h3 {
+  color: #FEBA02;
+  font-size: 6vw;
+  margin-bottom: 3vw;
+}
+.cases .s_case .c_top .ctext .pstm h5 {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  color: white;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-bottom: 1.7vw;
+}
+.cases .s_case .c_top .ctext .pstm h5 span svg {
+  width: 3vw;
+}
+.cases .s_case .c_top .ctext .pstm p {
+  color: white;
+}
+.cases .s_case .c_bottom .solnbox {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 2vw 0;
+}
+.cases .s_case .c_bottom .solnbox .sstm h5 {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  color: white;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-bottom: 1.7vw;
+}
+.cases .s_case .c_bottom .solnbox .sstm h5 span svg {
+  width: 3vw;
+}
+.cases .s_case .c_bottom .solnbox .sstm p {
+  color: white;
+}
+.cases .s_case .c_bottom .solnbox .sstm .btn {
+  margin-top: 1vw;
+}
+.cases .s_case .c_bottom .solnbox .stags {
+  padding-left: 8vw;
+}
+.cases .s_case .c_bottom .solnbox .stags .sstag {
+  background-color: #2c2c2c;
+  padding: 1vw;
+  display: flex;
+  gap: 1vw;
+  border-radius: 10px;
+  margin-bottom: 1vw;
+  align-items: center;
+}
+.cases .s_case .c_bottom .solnbox .stags .sstag svg {
+  width: 3vw;
+}
+.cases .s_case .c_bottom .solnbox .stags .sstag p {
+  color: white;
+}
+
 footer {
   padding: 4vw;
   padding-bottom: 0;
@@ -979,6 +1084,9 @@ footer .bottom_footer .compinfo::after {
   right: 0;
   background: linear-gradient(180deg, #181818 0%, rgba(24, 24, 24, 0) 110.94%);
 }
+footer .bottom_footer .compinfo .f_logo {
+  width: 20vw;
+}
 footer .bottom_footer .f_links {
   width: 50%;
   display: flex;
@@ -989,8 +1097,8 @@ footer .bottom_footer .f_links .f_serv {
 }
 footer .bottom_footer .f_links .f_serv h3 {
   color: #003585;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2vw;
+  margin-bottom: 1vw;
 }
 footer .bottom_footer .f_links .f_serv ul {
   list-style: none;
