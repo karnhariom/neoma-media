@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Tabs - Default functionality</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+
+    <style>
+        img {
+            width: 100%;
+        }
+
+        .maintab {
+            max-width: 80vw;
+            margin: auto;
+            padding: 100px;
+        }
+
+        .c_tabs {
+            display: flex;
+            min-height: 55vh;
+            border: 0 !important;
+        }
+
+        .c_tabs ul {
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            background-color: black;
+            margin-top: 30px !important;
+            border-radius: 20px;
+            margin-right: -100px !important;
+            z-index: 1;
+            padding: 1vw 3vw !important;
+        }
+
+        .tabcontents {
+            position: relative;
+            width: 70vw;
+            height: 100%;
+        }
+
+        .ui-tabs .ui-tabs-panel {
+            display: block !important;
+            position: absolute;
+            transition: all .5s ease-in;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            transform: scale(0);
+            transform-origin: top left;
+            opacity: 0;
+            padding: 0;
+            border-radius: 10px !important;
+        }
+
+        .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+            float: none;
+            padding: 0 !important;
+        }
+
+        .ui-tabs .ui-tabs-panel {
+            width: 60vw;
+        }
+
+
+        .ui-tabs .ui-tabs-panel[aria-hidden="false"] {
+            transform: scale(1);
+            border-radius: 0;
+            opacity: 1;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default,
+        .ui-button,
+        html .ui-button.ui-state-disabled:hover,
+        html .ui-button.ui-state-disabled:active {
+            background: none !important;
+            border: none !important;
+        }
+
+        .ui-state-default a,
+        .ui-state-default a:link,
+        .ui-state-default a:visited,
+        a.ui-button,
+        a:link.ui-button,
+        a:visited.ui-button,
+        .ui-button {
+            color: white;
+            font-size: 2vw;
+        }
+
+        .ui-state-active a,
+        .ui-state-active a:link,
+        .ui-state-active a:visited {
+            color: yellow;
+            font-size: 2vw;
+        }
+
+        .tabinfo{
+            width: 100%;
+            display: none;
+        }
+
+        li.ui-state-active .tabinfo{
+            display: block;
+        }
+
+        .ui-tabs .ui-tabs-nav li{
+            white-space: wrap;
+        }
+
+        .t_tags{
+            display: flex;
+            gap: 20px;
+        }
+
+        .t_tags .ttag{
+            border: 1px solid white;
+            padding: 10px 20px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="maintab">
+
+        <div id="tabs" class="c_tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">
+                        Sankalp Group
+                    </a>
+                    <div class="tabinfo">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                        <div class="t_tags">
+                            <p class="ttag">Design</p>
+                            <p class="ttag">Motion</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#tabs-2">
+                        National Tender
+                    </a>
+                    <div class="tabinfo">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                        <div class="t_tags">
+                            <p class="ttag">Design</p>
+                            <p class="ttag">Motion</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#tabs-3">
+                        Arena Animation
+                    </a>
+                    <div class="tabinfo">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                        <div class="t_tags">
+                            <p class="ttag">Design</p>
+                            <p class="ttag">Motion</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="tabcontents">
+                <div id="tabs-1">
+                    <img src="./assets/images/casestudy/chilliflakes 2.png" alt="">
+                </div>
+                <div id="tabs-2">
+                    <img src="./assets/images/casestudy/idlimix 2.png" alt="">
+                </div>
+                <div id="tabs-3">
+                    <img src="./assets/images/casestudy/sankalpcs.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

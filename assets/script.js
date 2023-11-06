@@ -20,6 +20,21 @@ gsap.from(".introvideo", {
     duration: 3
 });
 
+gsap.from(".circle3 .setcount", {
+    opacity: 0,
+    delay: 4
+});
+
+gsap.from(".circle2 .setcount", {
+    opacity: 0,
+    delay: 5
+});
+
+gsap.from(".circle4 .setcount", {
+    opacity: 0,
+    delay: 10
+});
+
 const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-button');
@@ -74,7 +89,8 @@ gsap.to(".ltastr", {
         end: "bottom top"
     },
 
-    y: 700,
+    // y: 700,
+    yPercent: 90,
     ease: "none"
 });
 

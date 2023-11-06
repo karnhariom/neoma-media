@@ -85,7 +85,7 @@ a {
   justify-content: space-between;
 }
 .topheader .logo a img {
-  height: 3.7vw;
+  height: 3vw;
 }
 .topheader .navmneu {
   display: flex;
@@ -534,7 +534,7 @@ a {
   background: url(./images/soverlay.webp);
   background-position: center center;
   background-size: cover;
-  height: 90vh;
+  padding: 10vw 0;
   position: relative;
   overflow: hidden;
 }
@@ -602,7 +602,7 @@ a {
   border-radius: 20px;
   transform: rotate(274deg);
   top: 7px;
-  left: -158px;
+  left: -177px;
   padding: 0.5vw;
 }
 .approach .appr_grp .setcount .settext p {
@@ -622,8 +622,8 @@ a {
   position: relative;
 }
 .approach .appr_grp .circle2 {
-  width: 90vw;
-  height: 45vw;
+  width: 86vw;
+  height: 43vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -635,8 +635,8 @@ a {
   animation-delay: 5s;
 }
 .approach .appr_grp .circle3 {
-  width: 80vw;
-  height: 40vw;
+  width: 72vw;
+  height: 36vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -648,8 +648,8 @@ a {
   animation-delay: 3s;
 }
 .approach .appr_grp .circle4 {
-  width: 70vw;
-  height: 35vw;
+  width: 58vw;
+  height: 29vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -661,8 +661,8 @@ a {
   animation-delay: 9s;
 }
 .approach .appr_grp .circle5 {
-  width: 60vw;
-  height: 30vw;
+  width: 44vw;
+  height: 22vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -671,8 +671,8 @@ a {
   transform: translateX(-50%);
 }
 .approach .appr_grp .circle6 {
-  width: 50vw;
-  height: 25vw;
+  width: 34vw;
+  height: 11vw;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -760,6 +760,7 @@ a {
   top: 0;
   left: -15%;
   z-index: -1;
+  height: 100%;
 }
 .processsec .prright .astline .ltastr svg {
   width: 10vw;
@@ -837,7 +838,6 @@ a {
   padding: 4vw;
   color: white;
   position: relative;
-  min-height: 700px;
 }
 .abtcontent .titlebox {
   margin: auto;
@@ -967,14 +967,17 @@ a {
   background-color: black;
   padding: 4vw;
 }
+.cases .s_case {
+  margin-top: 5vw;
+}
 .cases .s_case .c_top {
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
+  gap: 3vw;
 }
-.cases .s_case .c_top .cimg {
-  width: 60vw;
-  overflow: hidden;
+.cases .s_case .c_top .cimg img {
+  width: 100%;
 }
 .cases .s_case .c_top .ctext h3 {
   color: #FEBA02;
@@ -1000,6 +1003,7 @@ a {
   display: grid;
   grid-template-columns: 3fr 2fr;
   padding: 2vw 0;
+  gap: 3vw;
 }
 .cases .s_case .c_bottom .solnbox .sstm h5 {
   display: flex;
@@ -1033,9 +1037,20 @@ a {
 }
 .cases .s_case .c_bottom .solnbox .stags .sstag svg {
   width: 3vw;
+  height: 2vw;
 }
 .cases .s_case .c_bottom .solnbox .stags .sstag p {
   color: white;
+}
+.cases .s_case.ecase .c_top {
+  grid-template-columns: 2fr 3fr;
+}
+.cases .s_case.ecase .c_bottom .solnbox {
+  grid-template-columns: 2fr 3fr;
+}
+.cases .s_case.ecase .c_bottom .solnbox .stags {
+  padding-left: 0vw;
+  padding-right: 8vw;
 }
 
 footer {
@@ -1050,7 +1065,7 @@ footer .socialbar .s_icons {
   list-style: none;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 9vw;
 }
 footer .socialbar .s_icons .sicon {
   color: #FEBA02;
@@ -1124,6 +1139,184 @@ footer .c_footer ul li a {
   color: #4D4D4D;
 }
 
+@media only screen and (max-width: 900px) {
+  .topheader {
+    position: relative;
+  }
+  .topheader .logo a img {
+    height: 7vw;
+  }
+  .topheader .navmneu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    left: 0;
+    min-height: calc(100vh - 70px);
+    padding: 40px 0;
+    background-color: black;
+    top: 10vw;
+    z-index: 99;
+    justify-content: center;
+  }
+  .topheader .navmneu .nalink {
+    list-style: none;
+  }
+  .topheader .navmneu .nalink a {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .topheader .navmneu .nalink a .navtext {
+    opacity: 1;
+    transition: all 0.3s linear;
+    font-size: 20px;
+  }
+  .topheader .navmneu .nalink a .navico {
+    position: static;
+    transform: none;
+  }
+  .topheader .navmneu .nalink:hover a .navico {
+    transform: none;
+  }
+  .topheader .navmneu .nalink:hover a .navtext {
+    opacity: 1;
+  }
+  .topheader .navmneu.navopen {
+    display: flex;
+  }
+  .topheader .hamburger {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .titlebox h2 {
+    font-size: 25px;
+  }
+  p,
+  li,
+  a,
+  .btn {
+    font-size: 18px;
+  }
+  .contactsection .contactbox .titlebox .sec-title {
+    margin-bottom: 20px;
+  }
+  .contactsection .contactbox::before {
+    width: 80vw;
+    height: 70vw;
+  }
+  footer .bottom_footer {
+    flex-direction: column;
+  }
+  footer .bottom_footer .compinfo {
+    width: 100%;
+  }
+  footer .bottom_footer .compinfo::after {
+    display: none;
+  }
+  footer .bottom_footer .f_links {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer .bottom_footer .f_links .f_serv {
+    padding: 10px 0;
+  }
+  footer .bottom_footer .f_links .f_serv h3 {
+    font-size: 20px;
+  }
+  .c_footer {
+    flex-direction: column-reverse;
+    padding: 0px !important;
+  }
+  .visionsec .v_content {
+    display: flex;
+    flex-direction: column;
+  }
+  .visionsec .v_content .v_img {
+    display: none;
+  }
+  .visionsec .v_content .mission {
+    text-align: left;
+  }
+  .numbersec .numberboxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .numbersec .numberboxes .n_box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .numbersec .numberboxes .n_box p {
+    align-self: auto;
+  }
+  .numbersec .numberboxes .n_box p br {
+    display: none;
+  }
+  .numbersec .numberboxes .n_box h3 {
+    font-size: 30px;
+    -webkit-text-stroke: 1px #FEBA02;
+  }
+  .visionsec .v_content .mission .m_title, .visionsec .v_content .vision .m_title {
+    font-size: 22px;
+  }
+  .visionsec .v_content .mission .m_icon svg, .visionsec .v_content .vision .m_icon svg {
+    width: 22px;
+  }
+  .expertise .titlebox {
+    flex-direction: column;
+    align-items: self-start;
+    gap: 20px;
+  }
+  .approach .titlebox .sec_desc {
+    max-width: 100vw;
+  }
+  .expertise .expsec .singleexp {
+    display: flex;
+    flex-direction: column;
+  }
+  .expertise .expsec .singleexp:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  .expertise .expsec .singleexp .expcont .exsec h4 {
+    font-size: 22px;
+  }
+  .processsec {
+    grid-template-columns: 1fr;
+  }
+  .processsec .prright .astline {
+    display: none;
+  }
+  .processsec .prright .prtopics h3 {
+    font-size: 22px;
+  }
+  .cases .s_case .c_top .ctext .pstm h5,
+  .cases .s_case .c_bottom .solnbox .sstm h5 {
+    font-size: 20px;
+  }
+  .cases .s_case .c_top {
+    display: flex;
+    flex-direction: column;
+  }
+  .cases .s_case.ecase .c_top {
+    flex-direction: column-reverse;
+  }
+  .cases .s_case .c_bottom .solnbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .cases .s_case.ecase .c_bottom .solnbox {
+    flex-direction: column-reverse;
+  }
+  .cases .s_case .c_bottom .solnbox .stags {
+    padding: 0;
+    display: flex;
+    gap: 3vw;
+    flex-wrap: wrap;
+  }
+}
 @keyframes earth {
   from {
     -webkit-transform: rotateZ(0deg);
@@ -1191,54 +1384,5 @@ footer .c_footer ul li a {
   }
   100% {
     transform: rotate(10deg);
-  }
-}
-@media only screen and (max-width: 900px) {
-  .topheader {
-    position: relative;
-  }
-  .topheader .navmneu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    flex-direction: column;
-    left: 0;
-    min-height: calc(100vh - 70px);
-    padding: 40px 0;
-    background-color: black;
-    top: 70px;
-    z-index: 99;
-    justify-content: center;
-  }
-  .topheader .navmneu .nalink {
-    list-style: none;
-  }
-  .topheader .navmneu .nalink a {
-    color: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .topheader .navmneu .nalink a .navtext {
-    opacity: 1;
-    transition: all 0.3s linear;
-    font-size: 20px;
-  }
-  .topheader .navmneu .nalink a .navico {
-    position: static;
-    transform: none;
-  }
-  .topheader .navmneu .nalink:hover a .navico {
-    transform: none;
-  }
-  .topheader .navmneu .nalink:hover a .navtext {
-    opacity: 1;
-  }
-  .topheader .navmneu.navopen {
-    display: flex;
-  }
-  .topheader .hamburger {
-    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
