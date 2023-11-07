@@ -310,12 +310,22 @@ a {
   height: 120px;
   position: relative;
 }
-.clients-box .toplogo .l_box::before {
+.clients-box .toplogo .l_box:nth-child(1)::before, .clients-box .toplogo .l_box:nth-child(2)::before, .clients-box .toplogo .l_box:nth-child(3)::before {
   content: "";
   position: absolute;
   width: 2px;
   height: 100%;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  top: -30px;
+}
+.clients-box .toplogo .l_box:nth-child(4)::after, .clients-box .toplogo .l_box:nth-child(5)::after, .clients-box .toplogo .l_box:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  top: -30px;
+  right: 0;
 }
 .clients-box .toplogo .l_box:nth-child(1),
 .clients-box .toplogo .l_box:nth-child(6) {
@@ -347,7 +357,7 @@ a {
   height: 120px;
   position: relative;
 }
-.clients-box .bottomlogo .l_box::before {
+.clients-box .bottomlogo .l_box:nth-child(1)::before, .clients-box .bottomlogo .l_box:nth-child(2)::before, .clients-box .bottomlogo .l_box:nth-child(3)::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -355,8 +365,14 @@ a {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   top: -30px;
 }
-.clients-box .bottomlogo .l_box:nth-child(3)::before {
-  top: -46px;
+.clients-box .bottomlogo .l_box:nth-child(3)::after, .clients-box .bottomlogo .l_box:nth-child(4)::after, .clients-box .bottomlogo .l_box:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  top: -30px;
+  right: 0;
 }
 .clients-box .bottomlogo .l_box:nth-child(1),
 .clients-box .bottomlogo .l_box:nth-child(5) {
@@ -599,7 +615,7 @@ a {
   background: url(./images/tframe.webp);
   background-size: cover;
   color: white;
-  border-radius: 20px;
+  border-radius: 9px;
   transform: rotate(274deg);
   top: 7px;
   left: -177px;
@@ -613,6 +629,16 @@ a {
   background: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+}
+.approach .appr_grp .setcount .settext::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 3vw;
+  background-color: red;
+  left: 50%;
+  bottom: -100%;
+  z-index: 999;
 }
 .approach .appr_grp .circle1 {
   width: 100vw;
@@ -791,12 +817,12 @@ a {
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
-  background: url(./images/abtbg.webp);
+  background: url(./images/abtbg.webp), linear-gradient(0deg, rgb(24, 24, 24) 0%, rgb(7, 17, 49) 100%);
   background-position: center center;
   background-size: cover;
   position: relative;
   overflow: hidden;
-  padding: 10vw 4vw;
+  padding: 4vw;
 }
 .abthero .leftabt h3 {
   color: white;
@@ -833,7 +859,7 @@ a {
 }
 
 .abtcontent {
-  background: #181818 url(./images/abtbg2.webp);
+  background: linear-gradient(0deg, rgb(24, 24, 24) 50%, rgb(7, 17, 49) 100%), url(./images/abtbg2.webp);
   background-size: cover;
   padding: 4vw;
   color: white;
@@ -841,8 +867,6 @@ a {
 }
 .abtcontent .titlebox {
   margin: auto;
-  position: sticky;
-  top: 0;
   margin-bottom: 4vw;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -868,8 +892,35 @@ a {
   text-align: center;
 }
 
+.abt2 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  background: url(./images/about3.png), linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(7, 17, 49) 100%);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding: 10vw 4vw;
+  background-blend-mode: overlay;
+}
+.abt2 .leftabt2 img {
+  width: 20vw;
+}
+.abt2 .rightabt2 h3 {
+  color: white;
+  font-size: 6vw;
+}
+
 .visionsec {
   padding: 4vw;
+}
+.visionsec .titlebox {
+  display: flex;
+  justify-content: space-between;
+}
+.visionsec .titlebox img {
+  width: 30vw;
 }
 .visionsec .v_content {
   display: grid;
@@ -898,8 +949,9 @@ a {
 .visionsec .v_content .vision .m_para {
   color: #808080;
 }
-.visionsec .v_content .v_img svg {
-  animation: vrotate 100s linear infinite normal;
+.visionsec .v_content .v_img img {
+  transform: rotate(-5deg);
+  width: 100%;
 }
 
 .numbersec {
@@ -1211,7 +1263,7 @@ footer .socialbar .s_icons {
 }
 footer .socialbar .s_icons .sicon {
   color: #FEBA02;
-  font-size: 24px;
+  font-size: 2.5vw;
 }
 footer .bottom_footer {
   display: flex;
@@ -1254,7 +1306,7 @@ footer .bottom_footer .f_links .f_serv {
 }
 footer .bottom_footer .f_links .f_serv h3 {
   color: #003585;
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-bottom: 1vw;
 }
 footer .bottom_footer .f_links .f_serv ul {

@@ -131,20 +131,3 @@ hamburger.addEventListener("click", openmenu);
 function openmenu() {
     navmenu.classList.toggle("navopen");
 }
-
-const split = new SplitText(".skwpara p", { type: "lines" });
-
-split.lines.forEach((target) => {
-  gsap.to(target, {
-    backgroundPositionX: 0,
-    skew: 20,
-    ease: "ease",
-    scrollTrigger: {
-      trigger: target,
-      scrub: 1,
-      start: "top center",
-      end: "bottom center",
-      duration: 1
-    }
-  });
-});

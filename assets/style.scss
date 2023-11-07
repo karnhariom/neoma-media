@@ -386,12 +386,31 @@ a {
             height: 120px;
             position: relative;
 
-            &::before {
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     width: 2px;
+            //     height: 100%;
+            //     background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+            // }
+
+            &:nth-child(1)::before,&:nth-child(2)::before,&:nth-child(3)::before{
                 content: "";
                 position: absolute;
                 width: 2px;
                 height: 100%;
                 background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+                top: -30px;
+            }
+
+            &:nth-child(4)::after,&:nth-child(5)::after,&:nth-child(6)::after{
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+                top: -30px;
+                right: 0;
             }
         }
 
@@ -429,7 +448,7 @@ a {
             height: 120px;
             position: relative;
 
-            &::before {
+            &:nth-child(1)::before,&:nth-child(2)::before,&:nth-child(3)::before{
                 content: "";
                 position: absolute;
                 width: 2px;
@@ -438,9 +457,17 @@ a {
                 top: -30px;
             }
 
-            &:nth-child(3)::before {
-                top: -46px;
+            &:nth-child(3)::after,&:nth-child(4)::after,&:nth-child(5)::after{
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+                top: -30px;
+                right: 0;
             }
+
+
         }
 
 
@@ -752,7 +779,7 @@ a {
                 background: url(./images/tframe.webp);
                 background-size: cover;
                 color: white;
-                border-radius: 20px;
+                border-radius: 9px;
                 transform: rotate(274deg);
                 top: 7px;
                 left: -177px;
@@ -765,6 +792,17 @@ a {
                     border-radius: 9px;
                     background: rgba(255, 255, 255, 0.15);
                     backdrop-filter: blur(2px);
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 3vw;
+                    background-color: red;
+                    left: 50%;
+                    bottom: -100%;
+                    z-index: 999;
                 }
             }
 
@@ -997,13 +1035,15 @@ a {
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-items: center;
-    background: url(./images/abtbg.webp);
+    // background: url(./images/abtbg.webp);
+    background:  url(./images/abtbg.webp), linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(7,17,49,1) 100%);
     // background-color: #071131;
     background-position: center center;
     background-size: cover;
     position: relative;
     overflow: hidden;
-    padding: 10vw 4vw;
+    padding: 4vw;
+    // background-blend-mode: overlay;
 
     .leftabt {
 
@@ -1056,7 +1096,7 @@ a {
 }
 
 .abtcontent {
-    background: $black url(./images/abtbg2.webp);
+    background:  linear-gradient(0deg, rgba(24,24,24,1) 50%, rgba(7,17,49,1) 100%), url(./images/abtbg2.webp);
     background-size: cover;
     padding: 4vw;
     color: white;
@@ -1065,8 +1105,8 @@ a {
 
     .titlebox {
         margin: auto;
-        position: sticky;
-        top: 0;
+        // position: sticky;
+        // top: 0;
         margin-bottom: 4vw;
         backdrop-filter: blur(2px);
 
@@ -1097,8 +1137,46 @@ a {
     }
 }
 
+.abt2{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    background:  url(./images/about3.png), linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(7,17,49,1) 100%);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding: 10vw 4vw;
+    background-blend-mode: overlay;
+
+    .leftabt2 {
+        img{
+            width: 20vw;
+        }
+        
+    }
+
+    .rightabt2 {
+        h3 {
+            color: white;
+            font-size: 6vw;
+        }
+
+        
+    }
+}
+
 .visionsec {
     padding: 4vw;
+
+    .titlebox{
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: 30vw;
+        }
+    }
 
     .v_content {
         display: grid;
@@ -1132,8 +1210,9 @@ a {
         }
 
         .v_img {
-            svg {
-                animation: vrotate 100s linear infinite normal;
+            img{
+                transform: rotate(-5deg);
+                width: 100%;
             }
         }
 
@@ -1543,7 +1622,7 @@ footer {
 
             .sicon {
                 color: $orange;
-                font-size: 24px;
+                font-size: 2.5vw;
             }
         }
     }
@@ -1593,8 +1672,9 @@ footer {
 
                 h3 {
                     color: $blue;
-                    font-size: 2vw;
+                    font-size: 1.5vw;
                     margin-bottom: 1vw;
+                    // font-weight: 400;
                 }
 
                 ul {
