@@ -1053,6 +1053,148 @@ a {
   padding-right: 8vw;
 }
 
+.contacthero {
+  padding: 6vw 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacthero h3 {
+  color: #003585;
+  font-size: 3vw;
+}
+.contacthero .ctb {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.contacthero .ctb img {
+  width: 100%;
+}
+
+.formsection {
+  padding: 4vw 20vw;
+  background: url(./images/formbg.webp);
+  background-size: cover;
+}
+.formsection .titlebox h2 {
+  color: #FEBA02;
+}
+.formsection .c_form {
+  margin-top: 4vw;
+}
+.formsection .c_form form {
+  color: white;
+}
+.formsection .c_form form p {
+  line-height: 3em;
+}
+.formsection .c_form form input {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.5em;
+  text-align: center;
+  border-bottom: 1px dashed white;
+}
+.formsection .c_form form .selectfield {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5vw 1vw;
+  border-radius: 20000px;
+  margin: 0 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.formsection .c_form form .selectfield input {
+  display: none;
+}
+.formsection .c_form form .selectfield input:checked ~ .c_box::after {
+  background-color: white;
+}
+.formsection .c_form form .selectfield .c_box {
+  width: 1.2vw;
+  height: 1.2vw;
+  border: 1px solid white;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 0.5vw;
+  position: relative;
+}
+.formsection .c_form form .selectfield .c_box::after {
+  content: "";
+  position: absolute;
+  width: 0.6vw;
+  height: 0.6vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+.formsection .c_form form textarea {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.5em;
+  border-bottom: 1px dashed white;
+  width: 100%;
+  resize: none;
+}
+.formsection .c_form form .agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formsection .c_form form .agreement .selectfield {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+.formsection .c_form form .agreement .selectfield .c_box {
+  border-radius: 5px;
+}
+.formsection .c_form form .agreement .selectfield .c_box::after {
+  border-radius: 1px;
+}
+.formsection .c_form form .submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.formsection .c_form form .submit button {
+  border: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+}
+
+.c_details {
+  padding: 4vw;
+}
+.c_details .s_detail {
+  margin: 2vw 0;
+  display: flex;
+  justify-content: space-between;
+}
+.c_details .s_detail .pright {
+  text-align: right;
+}
+.c_details .hr {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(133, 133, 133, 0) 0%, #858585 100%);
+}
+
 footer {
   padding: 4vw;
   padding-bottom: 0;
@@ -1259,10 +1401,12 @@ footer .c_footer ul li a {
     font-size: 30px;
     -webkit-text-stroke: 1px #FEBA02;
   }
-  .visionsec .v_content .mission .m_title, .visionsec .v_content .vision .m_title {
+  .visionsec .v_content .mission .m_title,
+  .visionsec .v_content .vision .m_title {
     font-size: 22px;
   }
-  .visionsec .v_content .mission .m_icon svg, .visionsec .v_content .vision .m_icon svg {
+  .visionsec .v_content .mission .m_icon svg,
+  .visionsec .v_content .vision .m_icon svg {
     width: 22px;
   }
   .expertise .titlebox {

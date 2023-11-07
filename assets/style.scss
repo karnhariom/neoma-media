@@ -768,7 +768,7 @@ a {
                 }
             }
 
-            
+
         }
 
         .circle1 {
@@ -1348,6 +1348,175 @@ a {
 }
 
 
+// contact page styling=====================================================================================
+
+.contacthero {
+    padding: 6vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        color: $blue;
+        font-size: 3vw;
+    }
+
+    .ctb {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.formsection {
+    padding: 4vw 20vw;
+    background: url(./images/formbg.webp);
+    background-size: cover;
+
+    .titlebox {
+        h2 {
+            color: $orange;
+        }
+    }
+
+    .c_form {
+        margin-top: 4vw;
+
+        form {
+            color: white;
+            p {
+                line-height: 3em;
+            }
+
+            input {
+                background: none;
+                outline: none;
+                border: none;
+                color: white;
+                font-weight: 400;
+                font-size: 1.3vw;
+                line-height: 1.5em;
+                text-align: center;
+                border-bottom: 1px dashed white;
+            }
+
+            .selectfield {
+                background-color: rgba(255, 255, 255, 0.10);
+                padding: .5vw 1vw;
+                border-radius: 20000px;
+                margin: 0 5px;
+                user-select: none;
+                position: relative;
+
+                input {
+                    display: none;
+
+                    &:checked~.c_box::after {
+                        background-color: white;
+                    }
+                }
+
+                .c_box {
+                    width: 1.2vw;
+                    height: 1.2vw;
+                    border: 1px solid white;
+                    border-radius: 100%;
+                    display: inline-block;
+                    margin-left: .5vw;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: .6vw;
+                        height: .6vw;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 100%;
+                    }
+
+                }
+            }
+
+            textarea{
+                background: none;
+                outline: none;
+                border: none;
+                color: white;
+                font-weight: 400;
+                font-size: 1.3vw;
+                line-height: 1.5em;
+                border-bottom: 1px dashed white;
+                width: 100%;
+                resize: none;
+            }
+
+            .agreement{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .selectfield{
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    gap: 10px;
+
+                    .c_box{
+                        border-radius: 5px;
+
+                        &::after{
+                            border-radius: 1px;
+                        }
+                    }
+                }
+            }
+
+            .submit{
+                display: flex;
+                justify-content: center;
+                margin-top: 2vw;
+                
+                button{
+                    border: none;
+                    outline: none;
+                    margin: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+.c_details{
+    padding: 4vw;
+
+    .s_detail{
+        margin: 2vw 0;
+        display: flex;
+        justify-content: space-between;
+
+        .pright{
+            text-align: right;
+        }
+    }
+
+    .hr{
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(133, 133, 133, 0.00) 0%, #858585 100%);
+    }
+
+}
+
 
 
 
@@ -1542,7 +1711,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
-    .titlebox h2{
+    .titlebox h2 {
         font-size: 25px;
     }
 
@@ -1554,47 +1723,47 @@ footer {
     }
 
     // contact section 
-    .contactsection .contactbox{
+    .contactsection .contactbox {
 
-        .titlebox{
-            .sec-title{
+        .titlebox {
+            .sec-title {
                 margin-bottom: 20px;
             }
         }
 
-        &::before{
+        &::before {
             width: 80vw;
             height: 70vw;
         }
     }
 
     // footer 
-    footer .bottom_footer{
+    footer .bottom_footer {
         flex-direction: column;
 
-        .compinfo{
+        .compinfo {
             width: 100%;
 
-            &::after{
+            &::after {
                 display: none;
             }
         }
 
-        .f_links{
+        .f_links {
             flex-direction: column;
             width: 100%;
 
-            .f_serv{
+            .f_serv {
                 padding: 10px 0;
 
-                h3{
+                h3 {
                     font-size: 20px;
                 }
             }
         }
     }
 
-    .c_footer{
+    .c_footer {
         flex-direction: column-reverse;
         padding: 0px !important;
     }
@@ -1621,88 +1790,95 @@ footer {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             p {
                 align-self: auto;
+
                 br {
                     display: none;
                 }
             }
 
-            h3{
+            h3 {
                 font-size: 30px;
                 -webkit-text-stroke: 1px $orange;
             }
         }
     }
-    .visionsec .v_content .mission .m_title, .visionsec .v_content .vision .m_title{
+
+    .visionsec .v_content .mission .m_title,
+    .visionsec .v_content .vision .m_title {
         font-size: 22px;
     }
-    .visionsec .v_content .mission .m_icon svg, .visionsec .v_content .vision .m_icon svg{
+
+    .visionsec .v_content .mission .m_icon svg,
+    .visionsec .v_content .vision .m_icon svg {
         width: 22px;
     }
 
     // service page 
 
-    .expertise .titlebox{
+    .expertise .titlebox {
         flex-direction: column;
         align-items: self-start;
         gap: 20px;
     }
 
-    .approach .titlebox .sec_desc{
+    .approach .titlebox .sec_desc {
         max-width: 100vw;
     }
 
-    .expertise .expsec .singleexp{
+    .expertise .expsec .singleexp {
         display: flex;
         flex-direction: column;
 
-        &:nth-child(odd){
+        &:nth-child(odd) {
             flex-direction: column-reverse;
         }
     }
 
-    .expertise .expsec .singleexp .expcont .exsec h4{
+    .expertise .expsec .singleexp .expcont .exsec h4 {
         font-size: 22px;
     }
 
-    .processsec{
+    .processsec {
         grid-template-columns: 1fr;
     }
-    
-    .processsec .prright .astline{
+
+    .processsec .prright .astline {
         display: none;
     }
-    .processsec .prright .prtopics h3{
+
+    .processsec .prright .prtopics h3 {
         font-size: 22px;
     }
 
 
     // case study page responsive
-    
+
     .cases .s_case .c_top .ctext .pstm h5,
     .cases .s_case .c_bottom .solnbox .sstm h5 {
         font-size: 20px;
     }
-    
+
     .cases .s_case .c_top {
         display: flex;
         flex-direction: column;
     }
-    
+
     .cases .s_case.ecase .c_top {
         flex-direction: column-reverse;
     }
-    
+
     .cases .s_case .c_bottom .solnbox {
         display: flex;
         flex-direction: column;
     }
-    
+
     .cases .s_case.ecase .c_bottom .solnbox {
         flex-direction: column-reverse;
     }
-    
+
     .cases .s_case .c_bottom .solnbox .stags {
         padding: 0;
         display: flex;
