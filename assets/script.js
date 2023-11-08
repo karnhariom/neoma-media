@@ -123,6 +123,21 @@ var swiper = new Swiper(".revSwiper", {
     },
 });
 
+var swiper = new Swiper(".logoswiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    //   autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+    // mousewheel: true,
+});
+
 var hamburger = document.querySelector(".hamburger")
 var navmenu = document.querySelector(".navmneu")
 

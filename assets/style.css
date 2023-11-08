@@ -250,7 +250,7 @@ a {
 .clients-box {
   background: #181818;
   padding-top: 300px;
-  padding-bottom: 50px;
+  padding-bottom: 130px;
   margin-top: 50px;
   position: relative;
 }
@@ -409,6 +409,10 @@ a {
   fill: #000C1F;
 }
 
+.mobileclient {
+  display: none;
+}
+
 .usps {
   background: url(./images/Universe_items.png) #000C1F;
   background-size: cover;
@@ -426,12 +430,15 @@ a {
   margin-bottom: 2vw;
   color: white;
 }
+.usps .uspscontainer .uspsleft .astrs svg {
+  width: 16vw;
+}
 .usps .uspscontainer .upsright {
   display: flex;
   justify-content: center;
 }
 .usps .uspscontainer .upsright svg {
-  width: 100%;
+  width: 30vw;
 }
 
 .testimonial {
@@ -448,6 +455,9 @@ a {
 }
 .testimonial .testgrid .testimg svg {
   width: 16vw;
+}
+.testimonial .testgrid .testimg svg .helloanimation {
+  animation: helloanimation 2s linear infinite alternate;
 }
 .testimonial .testgrid .swiper {
   width: 70%;
@@ -537,7 +547,7 @@ a {
   margin-top: 10vw;
   margin-bottom: -15vw;
 }
-.contactsection .contactbox .bot_astr svg {
+.contactsection .contactbox .bot_astr img {
   width: 20vw;
   animation: astro 4s linear infinite alternate;
 }
@@ -606,8 +616,9 @@ a {
 .approach .appr_grp .setcount img {
   position: absolute;
   left: -40px;
-  transform: rotate(45deg);
-  width: 4vw;
+  transform: rotate(-45deg);
+  height: 4vw;
+  z-index: 1;
 }
 .approach .appr_grp .setcount .settext {
   position: absolute;
@@ -635,10 +646,21 @@ a {
   position: absolute;
   width: 2px;
   height: 3vw;
-  background-color: red;
-  left: 50%;
-  bottom: -100%;
-  z-index: 999;
+  background-color: black;
+  left: 58%;
+  bottom: -88%;
+  z-index: 0;
+}
+.approach .appr_grp .setcount .settext::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  left: 56.4%;
+  top: 102%;
+  z-index: 0;
+  border-radius: 100%;
 }
 .approach .appr_grp .circle1 {
   width: 100vw;
@@ -867,7 +889,6 @@ a {
 }
 .abtcontent .titlebox {
   margin: auto;
-  margin-bottom: 4vw;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
@@ -878,18 +899,11 @@ a {
   max-width: 60vw;
   margin: auto;
 }
-.abtcontent .skwpara p {
-  text-align: center;
+.abtcontent .skwpara p marquee {
+  text-align: justify;
   font-size: 2vw;
-}
-.abtcontent .skwpara p div {
-  background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
-  background-size: 200% 100%;
-  background-position-x: 100%;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  text-align: center;
+  line-height: 1.3em;
+  transform: perspective(400px) rotateX(30deg);
 }
 
 .abt2 {
@@ -952,45 +966,74 @@ a {
 .visionsec .v_content .v_img img {
   transform: rotate(-5deg);
   width: 100%;
+  margin-top: 1.6vw;
 }
 
 .numbersec {
-  padding: 4vw;
-  background: #003585;
-  background-size: cover;
-  background-position: center center;
-  background-blend-mode: multiply;
+  padding: 5vw;
+  padding-top: 10vw;
+  background: #D6E7FF;
 }
-.numbersec .titlebox .sec-title {
-  color: #FEBA02;
-}
-.numbersec .numberboxes {
+.numbersec .numbgrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3vw;
-  margin-top: 4vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 3vw;
+  grid-row-gap: 3vw;
 }
-.numbersec .numberboxes .n_box {
-  padding: 2vw 1vw;
-  border: 1px solid red;
+.numbersec .numbgrid .titleg {
+  grid-area: 1/1/2/3;
+}
+.numbersec .numbgrid .firstbox {
+  grid-area: 1/3/2/4;
+}
+.numbersec .numbgrid .secondbox {
+  grid-area: 2/1/3/2;
+}
+.numbersec .numbgrid .thirdbox {
+  grid-area: 2/2/3/3;
+}
+.numbersec .numbgrid .fourthbox {
+  grid-area: 2/3/3/4;
+}
+.numbersec .numbgrid .n_box {
+  background: #002152;
+  color: white;
+  padding: 2vw 3vw;
+  border-radius: 100px;
   display: flex;
-  gap: 2vw;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  border: 1px solid #FFF;
-  background: linear-gradient(260deg, rgba(255, 255, 255, 0.25) 1.32%, rgba(255, 255, 255, 0) 100%);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  gap: 1vw;
+  position: relative;
 }
-.numbersec .numberboxes .n_box p {
-  color: #B2D1FF;
-  align-self: end;
+.numbersec .numbgrid .n_box p {
   text-align: center;
 }
-.numbersec .numberboxes .n_box h3 {
-  color: transparent;
-  -webkit-text-stroke: 2px #FEBA02;
+.numbersec .numbgrid .n_box h3 {
+  color: #FEBA02;
   font-size: 3vw;
+}
+.numbersec .numbgrid .n_box h4 {
+  font-size: 4vw;
+  color: #FEBA02;
+  font-weight: 500;
+}
+.numbersec .numbgrid .n_box.titleg svg {
+  height: 10vw;
+  position: absolute;
+  top: -55%;
+  left: 10%;
+}
+.numbersec .numbgrid .n_box .boxastro {
+  height: 7vw;
+  position: absolute;
+  bottom: 0;
+  left: -4%;
+}
+.numbersec .numbgrid .n_box .boxastro .heartani {
+  animation: heartop 2s linear infinite alternate;
 }
 
 .casehero {
@@ -1013,6 +1056,7 @@ a {
 }
 .casehero .readastro svg {
   width: 16vw;
+  animation: astrochair 4s linear infinite alternate;
 }
 
 .cases {
@@ -1386,6 +1430,9 @@ footer .c_footer ul li a {
   }
 }
 @media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .titlebox h2 {
     font-size: 25px;
   }
@@ -1395,11 +1442,37 @@ footer .c_footer ul li a {
   .btn {
     font-size: 18px;
   }
+  .projects .titlebox .rocket {
+    display: none;
+  }
+  .clients {
+    display: none;
+  }
+  .mobileclient {
+    display: block;
+    padding: 4vw;
+    background-color: black;
+  }
+  .mobileclient .titlebox .sec-title {
+    color: white;
+  }
+  .mobileclient .logoswiper {
+    margin: 3vw 0;
+  }
+  .mobileclient .logoswiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  .mobileclient .logoswiper .swiper-pagination {
+    display: none;
+  }
   .contactsection .contactbox .titlebox .sec-title {
     margin-bottom: 20px;
   }
   .contactsection .contactbox::before {
-    width: 80vw;
+    width: 75vw;
     height: 70vw;
   }
   footer .bottom_footer {
@@ -1580,5 +1653,23 @@ footer .c_footer ul li a {
   }
   100% {
     transform: rotate(10deg);
+  }
+}
+@keyframes heartop {
+  0% {
+    transform: translateY(5px);
+  }
+}
+@keyframes astrochair {
+  0% {
+    transform: translateY(-2vw);
+  }
+  100% {
+    transform: translateY(2vw);
+  }
+}
+@keyframes helloanimation {
+  0% {
+    transform: scale(0.5);
   }
 }/*# sourceMappingURL=style.css.map */

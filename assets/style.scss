@@ -296,6 +296,7 @@ a {
             z-index: -1;
 
             .innerrocket {
+                // width: 10vw;
                 position: absolute;
                 right: -300px;
                 bottom: -100px;
@@ -312,7 +313,7 @@ a {
 .clients-box {
     background: $black;
     padding-top: 300px;
-    padding-bottom: 50px;
+    padding-bottom: 130px;
     margin-top: 50px;
     position: relative;
 
@@ -394,7 +395,9 @@ a {
             //     background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
             // }
 
-            &:nth-child(1)::before,&:nth-child(2)::before,&:nth-child(3)::before{
+            &:nth-child(1)::before,
+            &:nth-child(2)::before,
+            &:nth-child(3)::before {
                 content: "";
                 position: absolute;
                 width: 2px;
@@ -403,7 +406,9 @@ a {
                 top: -30px;
             }
 
-            &:nth-child(4)::after,&:nth-child(5)::after,&:nth-child(6)::after{
+            &:nth-child(4)::after,
+            &:nth-child(5)::after,
+            &:nth-child(6)::after {
                 content: "";
                 position: absolute;
                 width: 2px;
@@ -448,7 +453,9 @@ a {
             height: 120px;
             position: relative;
 
-            &:nth-child(1)::before,&:nth-child(2)::before,&:nth-child(3)::before{
+            &:nth-child(1)::before,
+            &:nth-child(2)::before,
+            &:nth-child(3)::before {
                 content: "";
                 position: absolute;
                 width: 2px;
@@ -457,7 +464,9 @@ a {
                 top: -30px;
             }
 
-            &:nth-child(3)::after,&:nth-child(4)::after,&:nth-child(5)::after{
+            &:nth-child(3)::after,
+            &:nth-child(4)::after,
+            &:nth-child(5)::after {
                 content: "";
                 position: absolute;
                 width: 2px;
@@ -513,8 +522,11 @@ a {
     }
 
 }
-
 // client section end
+.mobileclient{
+    display: none;
+
+}
 
 // usps section start 
 .usps {
@@ -538,6 +550,12 @@ a {
                     color: white;
                 }
             }
+
+            .astrs{
+                svg{
+                    width: 16vw;
+                }
+            }
         }
 
         .upsright {
@@ -545,7 +563,7 @@ a {
             justify-content: center;
 
             svg {
-                width: 100%;
+                width: 30vw;
             }
         }
     }
@@ -568,6 +586,10 @@ a {
 
             svg {
                 width: 16vw;
+
+                .helloanimation{
+                    animation: helloanimation 2s linear infinite alternate;
+                }
             }
         }
 
@@ -677,7 +699,7 @@ a {
             margin-top: 10vw;
             margin-bottom: -15vw;
 
-            svg {
+            img {
                 width: 20vw;
                 animation: astro 4s linear infinite alternate;
             }
@@ -757,8 +779,6 @@ a {
         z-index: -1;
 
         .setcount {
-            // margin-bottom: -50px;
-            // height: 100px;
             width: 50%;
             transform-origin: right;
             animation: set1 15s linear infinite normal;
@@ -769,8 +789,10 @@ a {
             img {
                 position: absolute;
                 left: -40px;
-                transform: rotate(45deg);
-                width: 4vw;
+                transform: rotate(-45deg);
+                // width: 4vw;
+                height: 4vw;
+                z-index: 1;
             }
 
             .settext {
@@ -794,15 +816,27 @@ a {
                     backdrop-filter: blur(2px);
                 }
 
-                &::after{
+                &::after {
                     content: "";
                     position: absolute;
                     width: 2px;
                     height: 3vw;
-                    background-color: red;
-                    left: 50%;
-                    bottom: -100%;
-                    z-index: 999;
+                    background-color: black;
+                    left: 58%;
+                    bottom: -88%;
+                    z-index: 0;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: black;
+                    left: 56.4%;
+                    top: 102%;
+                    z-index: 0;
+                    border-radius: 100%;
                 }
             }
 
@@ -1036,7 +1070,7 @@ a {
     grid-template-columns: 3fr 2fr;
     align-items: center;
     // background: url(./images/abtbg.webp);
-    background:  url(./images/abtbg.webp), linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(7,17,49,1) 100%);
+    background: url(./images/abtbg.webp), linear-gradient(0deg, rgba(24, 24, 24, 1) 0%, rgba(7, 17, 49, 1) 100%);
     // background-color: #071131;
     background-position: center center;
     background-size: cover;
@@ -1096,18 +1130,14 @@ a {
 }
 
 .abtcontent {
-    background:  linear-gradient(0deg, rgba(24,24,24,1) 50%, rgba(7,17,49,1) 100%), url(./images/abtbg2.webp);
+    background: linear-gradient(0deg, rgba(24, 24, 24, 1) 50%, rgba(7, 17, 49, 1) 100%), url(./images/abtbg2.webp);
     background-size: cover;
     padding: 4vw;
     color: white;
     position: relative;
-    // min-height: 700px;
 
     .titlebox {
         margin: auto;
-        // position: sticky;
-        // top: 0;
-        margin-bottom: 4vw;
         backdrop-filter: blur(2px);
 
         .sec-title {
@@ -1120,28 +1150,21 @@ a {
         margin: auto;
 
         p {
-            text-align: center;
-            font-size: 2vw;
-
-            div {
-                background: linear-gradient(to right,
-                        rgb(255, 255, 255) 50%,
-                        rgb(37, 37, 37) 50%);
-                background-size: 200% 100%;
-                background-position-x: 100%;
-                color: transparent;
-                background-clip: text;
-                text-align: center;
+            marquee {
+                text-align: justify;
+                font-size: 2vw;
+                line-height: 1.3em;
+                transform: perspective(400px) rotateX(30deg);
             }
         }
     }
 }
 
-.abt2{
+.abt2 {
     display: grid;
     grid-template-columns: 2fr 3fr;
     align-items: center;
-    background:  url(./images/about3.png), linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(7,17,49,1) 100%);
+    background: url(./images/about3.png), linear-gradient(180deg, rgba(24, 24, 24, 1) 0%, rgba(7, 17, 49, 1) 100%);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1150,10 +1173,10 @@ a {
     background-blend-mode: overlay;
 
     .leftabt2 {
-        img{
+        img {
             width: 20vw;
         }
-        
+
     }
 
     .rightabt2 {
@@ -1162,18 +1185,18 @@ a {
             font-size: 6vw;
         }
 
-        
+
     }
 }
 
 .visionsec {
     padding: 4vw;
 
-    .titlebox{
+    .titlebox {
         display: flex;
         justify-content: space-between;
 
-        img{
+        img {
             width: 30vw;
         }
     }
@@ -1210,9 +1233,10 @@ a {
         }
 
         .v_img {
-            img{
+            img {
                 transform: rotate(-5deg);
                 width: 100%;
+                margin-top: 1.6vw;
             }
         }
 
@@ -1221,45 +1245,82 @@ a {
 }
 
 .numbersec {
-    padding: 4vw;
-    background: $blue;
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: multiply;
+    padding: 5vw;
+    padding-top: 10vw;
+    background: #D6E7FF;
 
-    .titlebox {
-        .sec-title {
-            color: $orange;
-        }
-    }
-
-    .numberboxes {
+    .numbgrid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3vw;
-        margin-top: 4vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+
+        .titleg {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .firstbox {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .secondbox {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .thirdbox {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .fourthbox {
+            grid-area: 2 / 3 / 3 / 4;
+        }
 
         .n_box {
-            padding: 2vw 1vw;
-            border: 1px solid red;
+            background: #002152;
+            color: white;
+            padding: 2vw 3vw;
+            border-radius: 100px;
             display: flex;
-            gap: 2vw;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            border-radius: 5px;
-            border: 1px solid #FFF;
-            background: linear-gradient(260deg, rgba(255, 255, 255, 0.25) 1.32%, rgba(255, 255, 255, 0.00) 100%);
-            backdrop-filter: blur(10px);
+            gap: 1vw;
+            position: relative;
 
-            p {
-                color: #B2D1FF;
-                align-self: end;
+            p{
                 text-align: center;
             }
 
-            h3 {
-                color: transparent;
-                -webkit-text-stroke: 2px $orange;
+            h3{
+                color: $orange;
                 font-size: 3vw;
+            }
+
+            h4{
+                font-size: 4vw;
+                color: $orange;
+                font-weight: 500;
+            }
+
+            &.titleg{
+                svg{
+                    height: 10vw;
+                    position: absolute;
+                    top: -55%;
+                    left: 10%;
+                }
+            }
+
+            .boxastro{
+                height: 7vw;
+                position: absolute;
+                bottom: 0;
+                left: -4%;
+
+                .heartani{
+                    animation: heartop 2s linear infinite alternate;
+                }
             }
         }
     }
@@ -1290,6 +1351,7 @@ a {
 
         svg {
             width: 16vw;
+            animation: astrochair 4s linear infinite alternate;
         }
     }
 }
@@ -1467,6 +1529,7 @@ a {
 
         form {
             color: white;
+
             p {
                 line-height: 3em;
             }
@@ -1522,7 +1585,7 @@ a {
                 }
             }
 
-            textarea{
+            textarea {
                 background: none;
                 outline: none;
                 border: none;
@@ -1535,12 +1598,12 @@ a {
                 resize: none;
             }
 
-            .agreement{
+            .agreement {
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                .selectfield{
+                .selectfield {
                     background-color: transparent;
                     display: flex;
                     justify-content: center;
@@ -1548,22 +1611,22 @@ a {
                     flex-direction: row-reverse;
                     gap: 10px;
 
-                    .c_box{
+                    .c_box {
                         border-radius: 5px;
 
-                        &::after{
+                        &::after {
                             border-radius: 1px;
                         }
                     }
                 }
             }
 
-            .submit{
+            .submit {
                 display: flex;
                 justify-content: center;
                 margin-top: 2vw;
-                
-                button{
+
+                button {
                     border: none;
                     outline: none;
                     margin: auto;
@@ -1575,20 +1638,20 @@ a {
 
 }
 
-.c_details{
+.c_details {
     padding: 4vw;
 
-    .s_detail{
+    .s_detail {
         margin: 2vw 0;
         display: flex;
         justify-content: space-between;
 
-        .pright{
+        .pright {
             text-align: right;
         }
     }
 
-    .hr{
+    .hr {
         width: 100%;
         height: 1px;
         background: linear-gradient(90deg, rgba(133, 133, 133, 0.00) 0%, #858585 100%);
@@ -1790,6 +1853,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
 
     .titlebox h2 {
         font-size: 25px;
@@ -1802,6 +1868,40 @@ footer {
         font-size: 18px;
     }
 
+    .projects .titlebox .rocket{
+        display: none;
+    }
+
+    .clients{
+        display: none;
+    }
+
+    .mobileclient{
+        display: block;
+        padding: 4vw;
+        background-color: black;
+
+        .titlebox{
+            .sec-title{
+                color: white;
+            }
+        }
+
+        .logoswiper{
+            margin: 3vw 0;
+            .swiper-slide{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+            }
+
+            .swiper-pagination{
+                display: none;
+            }
+        }
+    }
+
     // contact section 
     .contactsection .contactbox {
 
@@ -1812,7 +1912,7 @@ footer {
         }
 
         &::before {
-            width: 80vw;
+            width: 75vw;
             height: 70vw;
         }
     }
@@ -2066,6 +2166,28 @@ footer {
 
     100% {
         transform: rotate(10deg);
+    }
+}
+
+@keyframes heartop {
+    0%{
+        transform: translateY(5px);
+    }
+}
+
+@keyframes astrochair {
+    0%{
+        transform: translateY(-2vw);
+    }   
+    
+    100%{
+        transform: translateY(2vw);
+    }
+}
+
+@keyframes helloanimation {
+    0%{
+        transform: scale(.5);
     }
 }
 
