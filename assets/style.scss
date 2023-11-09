@@ -305,9 +305,33 @@ a {
         }
     }
 }
-
 // projects section end
 
+.projsec{
+    display: flex;
+    overflow-x: scroll;
+    width: 400vw;
+
+    .singlepro{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .pr_1{
+        background: red;
+    }
+
+    .pr_2{
+        background: green;
+    }
+    .pr_3{
+        background: yellow;
+    }
+    .pr_4{
+        background: orange;
+    }
+
+}
 
 // client section start 
 .clients-box {
@@ -762,6 +786,15 @@ a {
 }
 
 .approach {
+    position: relative;
+
+    .astrapp{
+        position: absolute;
+        width: 15vw;
+        top: 2vw;
+        right: 5vw;
+        animation: astrochair 4s linear infinite alternate;
+    }
 
     .titlebox {
         padding: 4vw;
@@ -1633,6 +1666,13 @@ a {
     
                 .bulletlist{
                     padding-left: 4vw;
+
+                    ul{
+                        li{
+                            color: #616161;
+                            list-style-type: disc;
+                        }
+                    }
     
                     h4{
                         font-size: 1.6vw;

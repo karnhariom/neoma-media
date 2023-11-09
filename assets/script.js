@@ -35,6 +35,8 @@ gsap.from(".circle4 .setcount", {
     delay: 10
 });
 
+
+
 const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-button');

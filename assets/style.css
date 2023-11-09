@@ -247,6 +247,28 @@ a {
   transform: rotate(16deg);
 }
 
+.projsec {
+  display: flex;
+  overflow-x: scroll;
+  width: 400vw;
+}
+.projsec .singlepro {
+  width: 100vw;
+  height: 100vh;
+}
+.projsec .pr_1 {
+  background: red;
+}
+.projsec .pr_2 {
+  background: green;
+}
+.projsec .pr_3 {
+  background: yellow;
+}
+.projsec .pr_4 {
+  background: orange;
+}
+
 .clients-box {
   background: #181818;
   padding-top: 300px;
@@ -591,6 +613,16 @@ a {
   height: 90%;
 }
 
+.approach {
+  position: relative;
+}
+.approach .astrapp {
+  position: absolute;
+  width: 15vw;
+  top: 2vw;
+  right: 5vw;
+  animation: astrochair 4s linear infinite alternate;
+}
 .approach .titlebox {
   padding: 4vw;
 }
@@ -1263,6 +1295,10 @@ a {
 }
 .singlecasecontent .casecontent .casegrid .rightccontent .bulletlist {
   padding-left: 4vw;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist ul li {
+  color: #616161;
+  list-style-type: disc;
 }
 .singlecasecontent .casecontent .casegrid .rightccontent .bulletlist h4 {
   font-size: 1.6vw;
