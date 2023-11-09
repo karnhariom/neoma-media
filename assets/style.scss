@@ -522,8 +522,9 @@ a {
     }
 
 }
+
 // client section end
-.mobileclient{
+.mobileclient {
     display: none;
 
 }
@@ -551,8 +552,8 @@ a {
                 }
             }
 
-            .astrs{
-                svg{
+            .astrs {
+                svg {
                     width: 16vw;
                 }
             }
@@ -587,7 +588,7 @@ a {
             svg {
                 width: 16vw;
 
-                .helloanimation{
+                .helloanimation {
                     animation: helloanimation 2s linear infinite alternate;
                 }
             }
@@ -1288,23 +1289,23 @@ a {
             gap: 1vw;
             position: relative;
 
-            p{
+            p {
                 text-align: center;
             }
 
-            h3{
+            h3 {
                 color: $orange;
                 font-size: 3vw;
             }
 
-            h4{
+            h4 {
                 font-size: 4vw;
                 color: $orange;
                 font-weight: 500;
             }
 
-            &.titleg{
-                svg{
+            &.titleg {
+                svg {
                     height: 10vw;
                     position: absolute;
                     top: -55%;
@@ -1312,13 +1313,13 @@ a {
                 }
             }
 
-            .boxastro{
+            .boxastro {
                 height: 7vw;
                 position: absolute;
                 bottom: 0;
                 left: -4%;
 
-                .heartani{
+                .heartani {
                     animation: heartop 2s linear infinite alternate;
                 }
             }
@@ -1338,6 +1339,7 @@ a {
     background-size: cover;
     background-position: center;
     justify-content: space-between;
+    border-bottom: 3px solid $orange;
 
     h3 {
         color: $orange;
@@ -1487,6 +1489,221 @@ a {
         }
     }
 }
+
+// single case study page styling =========================================================================
+
+.s_casehero {
+    padding: 6vw 4vw;
+    position: relative;
+
+    .casetitle{
+        h2{
+            font-size: 5vw;
+            color: #004AB8;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    .casemeta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        margin-top: 3vw;
+
+        .metabox{
+            p{
+                color: #616161;
+            }
+
+            h4{
+                color: $orange;
+                font-size: 1.4vw;
+            }
+        }
+    }
+
+    img{
+        position: absolute;
+
+        &.imgtop{
+            top: 6vw;
+            left: 1vw;
+            width: 10vw;
+        }
+
+        &.imgright{
+            top: 4vw;
+            right: 1vw;
+            width: 10vw;
+        }
+    }
+}
+
+.singlecasecontent{
+    position: relative;
+    
+    .casecontent{
+        padding: 4vw 0;
+        margin: auto;
+        position: relative;
+
+        .innerdiv{
+            max-width: 80%;
+            margin: auto;
+        }
+    
+        .caseimg{
+            position: relative;
+        
+            .cbanner{
+                display: block;
+                width: 100%;
+                margin: auto;
+                border-radius: 1rem;
+            }
+
+            .topstar{
+                position: absolute;
+                top: 40%;
+                left: -7vw;
+            }
+
+            .bottomstar{
+                width: 2vw;
+                position: absolute;
+                top: 70%;
+                left: -7vw;
+            }
+    
+        }
+    
+        .casegrid{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3vw;
+            padding: 2vw 0;
+    
+            .cimg{
+                img{
+                    width: 80%;
+                }
+    
+            }
+    
+            .numberc{
+                position: relative;
+    
+                h3{
+                    font-size: 8vw;
+                    text-align: center;
+                    -webkit-text-stroke: 1px $blue;
+                    color: transparent;
+                }
+    
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 90%;
+                    border-left: 2px dashed $blue;
+                    left: 50%;      
+                    z-index: -1;       
+                }
+    
+                &.nodasline::after{
+                    display: none;
+                }
+
+                .str{
+                    position: absolute;
+                    top: 45%;
+                }
+            }
+    
+            .rightccontent{
+                .cttle{
+                    color: #004AB8;
+                    font-size: 2vw;
+                    margin-bottom: 1vw;
+                }
+                p{
+                    margin-bottom: 1vw;
+                }
+    
+                .bulletlist{
+                    padding-left: 4vw;
+    
+                    h4{
+                        font-size: 1.6vw;
+                        color: $orange;
+                        position: relative;
+                        margin-bottom: 0.44vw;
+    
+                        &::before{
+                            content: "";
+                            width: 3.5vw;
+                            height: 2vw;
+                            position: absolute;
+                            left: -4vw;
+                            top: 0;
+                            background: url(./images/icons/rbullet.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    p{
+                        color: #616161;
+                        position: relative;
+                    }
+
+                    &.starlist{
+                        p::before{
+                            content: "";
+                            position: absolute;
+                            left: -3vw;
+                            top: 0.1vw;
+                            width: 2vw;
+                            height: 2vw;
+                            background: url(./images/casestudy/bicon.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+    .grp1{
+        position: absolute;
+        left: 0;
+        top: 20vw;
+        width: 4vw;
+    }
+    .grp2{
+        position: absolute;
+        right: 0;
+        top: 70vw;
+        width: 4vw;
+    }
+
+    .grp3{
+        position: absolute;
+        left: 0;
+        top: 180vw;
+        width: 5vw;
+    }
+
+    .grp4{
+        position: absolute;
+        right: 2vw;
+        top: 230vw;
+        width: 5vw;
+    }
+}
+
 
 
 // contact page styling=====================================================================================
@@ -1772,7 +1989,6 @@ footer {
         }
     }
 }
-
 // footer style end
 
 
@@ -1853,7 +2069,7 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    body{
+    body {
         overflow-x: hidden;
     }
 
@@ -1868,35 +2084,36 @@ footer {
         font-size: 18px;
     }
 
-    .projects .titlebox .rocket{
+    .projects .titlebox .rocket {
         display: none;
     }
 
-    .clients{
+    .clients {
         display: none;
     }
 
-    .mobileclient{
+    .mobileclient {
         display: block;
         padding: 4vw;
         background-color: black;
 
-        .titlebox{
-            .sec-title{
+        .titlebox {
+            .sec-title {
                 color: white;
             }
         }
 
-        .logoswiper{
+        .logoswiper {
             margin: 3vw 0;
-            .swiper-slide{
+
+            .swiper-slide {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100px;
             }
 
-            .swiper-pagination{
+            .swiper-pagination {
                 display: none;
             }
         }
@@ -2170,23 +2387,23 @@ footer {
 }
 
 @keyframes heartop {
-    0%{
+    0% {
         transform: translateY(5px);
     }
 }
 
 @keyframes astrochair {
-    0%{
+    0% {
         transform: translateY(-2vw);
-    }   
-    
-    100%{
+    }
+
+    100% {
         transform: translateY(2vw);
     }
 }
 
 @keyframes helloanimation {
-    0%{
+    0% {
         transform: scale(.5);
     }
 }

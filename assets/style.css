@@ -1044,6 +1044,7 @@ a {
   background-size: cover;
   background-position: center;
   justify-content: space-between;
+  border-bottom: 3px solid #FEBA02;
 }
 .casehero h3 {
   color: #FEBA02;
@@ -1147,6 +1148,177 @@ a {
 .cases .s_case.ecase .c_bottom .solnbox .stags {
   padding-left: 0vw;
   padding-right: 8vw;
+}
+
+.s_casehero {
+  padding: 6vw 4vw;
+  position: relative;
+}
+.s_casehero .casetitle h2 {
+  font-size: 5vw;
+  color: #004AB8;
+  font-weight: 500;
+  text-align: center;
+}
+.s_casehero .casemeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin-top: 3vw;
+}
+.s_casehero .casemeta .metabox p {
+  color: #616161;
+}
+.s_casehero .casemeta .metabox h4 {
+  color: #FEBA02;
+  font-size: 1.4vw;
+}
+.s_casehero img {
+  position: absolute;
+}
+.s_casehero img.imgtop {
+  top: 6vw;
+  left: 1vw;
+  width: 10vw;
+}
+.s_casehero img.imgright {
+  top: 4vw;
+  right: 1vw;
+  width: 10vw;
+}
+
+.singlecasecontent {
+  position: relative;
+}
+.singlecasecontent .casecontent {
+  padding: 4vw 0;
+  margin: auto;
+  position: relative;
+}
+.singlecasecontent .casecontent .innerdiv {
+  max-width: 80%;
+  margin: auto;
+}
+.singlecasecontent .casecontent .caseimg {
+  position: relative;
+}
+.singlecasecontent .casecontent .caseimg .cbanner {
+  display: block;
+  width: 100%;
+  margin: auto;
+  border-radius: 1rem;
+}
+.singlecasecontent .casecontent .caseimg .topstar {
+  position: absolute;
+  top: 40%;
+  left: -7vw;
+}
+.singlecasecontent .casecontent .caseimg .bottomstar {
+  width: 2vw;
+  position: absolute;
+  top: 70%;
+  left: -7vw;
+}
+.singlecasecontent .casecontent .casegrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3vw;
+  padding: 2vw 0;
+}
+.singlecasecontent .casecontent .casegrid .cimg img {
+  width: 80%;
+}
+.singlecasecontent .casecontent .casegrid .numberc {
+  position: relative;
+}
+.singlecasecontent .casecontent .casegrid .numberc h3 {
+  font-size: 8vw;
+  text-align: center;
+  -webkit-text-stroke: 1px #003585;
+  color: transparent;
+}
+.singlecasecontent .casecontent .casegrid .numberc::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  border-left: 2px dashed #003585;
+  left: 50%;
+  z-index: -1;
+}
+.singlecasecontent .casecontent .casegrid .numberc.nodasline::after {
+  display: none;
+}
+.singlecasecontent .casecontent .casegrid .numberc .str {
+  position: absolute;
+  top: 45%;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .cttle {
+  color: #004AB8;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent p {
+  margin-bottom: 1vw;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist {
+  padding-left: 4vw;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist h4 {
+  font-size: 1.6vw;
+  color: #FEBA02;
+  position: relative;
+  margin-bottom: 0.44vw;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist h4::before {
+  content: "";
+  width: 3.5vw;
+  height: 2vw;
+  position: absolute;
+  left: -4vw;
+  top: 0;
+  background: url(./images/icons/rbullet.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist p {
+  color: #616161;
+  position: relative;
+}
+.singlecasecontent .casecontent .casegrid .rightccontent .bulletlist.starlist p::before {
+  content: "";
+  position: absolute;
+  left: -3vw;
+  top: 0.1vw;
+  width: 2vw;
+  height: 2vw;
+  background: url(./images/casestudy/bicon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.singlecasecontent .grp1 {
+  position: absolute;
+  left: 0;
+  top: 20vw;
+  width: 4vw;
+}
+.singlecasecontent .grp2 {
+  position: absolute;
+  right: 0;
+  top: 70vw;
+  width: 4vw;
+}
+.singlecasecontent .grp3 {
+  position: absolute;
+  left: 0;
+  top: 180vw;
+  width: 5vw;
+}
+.singlecasecontent .grp4 {
+  position: absolute;
+  right: 2vw;
+  top: 230vw;
+  width: 5vw;
 }
 
 .contacthero {
