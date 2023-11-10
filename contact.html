@@ -201,66 +201,67 @@
             <h2 class="sec-title t_center">Reach out to us</h2>
         </div>
         <div class="c_form">
-            <form action="">
+            <form method="post" id="frmContactus">
                 <p>Hello! My name is <input type="text" name="name" id="" placeholder="John Doe" autocomplete="off"> And
                     I work in <input type="text" name="c_name" id="" placeholder="XYZ Pvt. Ltd" autocomplete="off">. I
                     found you using
                     <span class="selectfield">
                         <label for="wom"> Word of Mouth</label>
-                        <input type="checkbox" id="wom" name="WordofMouth" value="Word of Mouth">
+                        <input type="checkbox" id="wom" name="reachby" value="Word of Mouth">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Dribbble"> Dribbble</label>
-                        <input type="checkbox" id="Dribbble" name="Dribbble" value="Dribbble">
+                        <input type="checkbox" id="Dribbble" name="reachby" value="Dribbble">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Linkedin"> Linkedin</label>
-                        <input type="checkbox" id="Linkedin" name="Linkedin" value="Linkedin">
+                        <input type="checkbox" id="Linkedin" name="reachby" value="Linkedin">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Googlesearch"> Google search</label>
-                        <input type="checkbox" id="Googlesearch" name="Google search" value="Google search">
+                        <input type="checkbox" id="Googlesearch" name="reachby" value="Google search">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Other"> Other</label>
-                        <input type="checkbox" id="Other" name="Other" value="Other">
+                        <input type="checkbox" id="Other" name="reachby" value="Other">
                         <span class="c_box"></span>
                     </span>
                     I’m looking for help with:
                     <span class="selectfield">
                         <label for="Brandidentity"> Brand Identity</label>
-                        <input type="checkbox" id="Brandidentity" name="Brandidentity" value="Brand Identity">
+                        <input type="checkbox" id="Brandidentity" name="helpwant" value="Brand Identity">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="WebDesign"> Website Design</label>
-                        <input type="checkbox" id="WebDesign" name="WebDesign" value="Website Design">
+                        <input type="checkbox" id="WebDesign" name="helpwant" value="Website Design">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Productdesign"> Product design</label>
-                        <input type="checkbox" id="Productdesign" name="Productdesign" value="Product design">
+                        <input type="checkbox" id="Productdesign" name="helpwant" value="Product design">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="WebDevelopment"> Website Development</label>
-                        <input type="checkbox" id="WebDevelopment" name="WebDevelopment" value="Website Development">
+                        <input type="checkbox" id="WebDevelopment" name="helpwant" value="Website Development">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
                         <label for="Otherhelp"> Other</label>
-                        <input type="checkbox" id="Otherhelp" name="Otherhelp" value="Otherhelp">
+                        <input type="checkbox" id="Otherhelp" name="helpwant" value="Otherhelp">
                         <span class="c_box"></span>
                     </span>
 
                     Feel free to reach me at <input type="email" name="email" id="" placeholder="johndoe@example.com"
                         autocomplete="off">
                     to begin the conversation.<br>
-                    <textarea name="" id="" onkeyup="textAreaAdjust(this)" rows="1" >I would like to share more about my project...</textarea>
+                    <textarea name="message" id="" onkeyup="textAreaAdjust(this)"
+                        rows="1">I would like to share more about my project...</textarea>
                 </p>
                 <div class="agreement">
                     <span class="selectfield">
@@ -270,8 +271,10 @@
                     </span>
                 </div>
                 <div class="submit">
-                    <button class="y_btn btn">Start your journey <i class="fi fi-rr-arrow-right"></i></button>
+                    <button type="submit" id="submit" class="y_btn btn">Start your journey <i
+                            class="fi fi-rr-arrow-right"></i></button>
                 </div>
+                <p id="sucmsg" style="color: white;">Success!</p>
             </form>
         </div>
     </div>
@@ -286,7 +289,7 @@
         <div class="hr"></div>
         <div class="s_detail">
             <p>Office Address:</p>
-            <p class="pright">C – 102, D – 101, S. G. Business Hub,<br> 
+            <p class="pright">C – 102, D – 101, S. G. Business Hub,<br>
                 Off Gota Flyover, S. G. Highway, <br>
                 Vasantnagar, Ognaj, Ahmedabad, <br>
                 Gujarat – 380060</p>
@@ -294,43 +297,41 @@
     </div>
     <!-- contact details end -->
 
-
     <!-- footer start  -->
     <footer>
         <div class="socialbar">
             <ul class="s_icons">
-                <li><a href="#" class="sicon"><i class="fi fi-brands-instagram"></i></a></li>
-                <li><a href="#" class="sicon"><i class="fi fi-brands-facebook"></i></a></li>
-                <li><a href="#" class="sicon"><i class="fi fi-brands-twitter-alt"></i></a></li>
-                <li><a href="#" class="sicon"><i class="fi fi-brands-pinterest"></i></a></li>
-                <li><a href="#" class="sicon"><i class="fi fi-brands-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/neoma.media/" class="sicon"><i class="fi fi-brands-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/people/NeomaMedia/61550786768246/" class="sicon"><i class="fi fi-brands-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Neoma_Media" class="sicon"><i class="fi fi-brands-twitter-alt"></i></a></li>
+                <li><a href="https://in.pinterest.com/neoma_media/" class="sicon"><i class="fi fi-brands-pinterest"></i></a></li>
+                <li><a href="https://linkedin.com/company/neoma-media" class="sicon"><i class="fi fi-brands-linkedin"></i></a></li>
 
             </ul>
         </div>
         <div class="bottom_footer">
             <div class="compinfo">
-                <img src="./assets/images/logo-dark.svg" alt="">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text </p>
+                <img src="./assets/images/logo-dark.svg" alt="" class="f_logo">
+                <p>Cosmic Campaigns, Universal Impact: Your Brand's Odyssey Begins with Stellar Marketing</p>
             </div>
             <div class="f_links">
                 <div class="f_serv">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Marketing Strategy & Insights</a></li>
-                        <li><a href="#">Creative & Content Production</a></li>
-                        <li><a href="#">Media & Channel Activation</a></li>
-                        <li><a href="#">Customer Experience & Personalization</a></li>
-                        <li><a href="#">Measurement & Marketing ROI</a></li>
+                        <li>Marketing Strategy & Insights</li>
+                        <li>Creative & Content Production</li>
+                        <li>Media & Channel Activation</li>
+                        <li>Customer Experience & Personalization</li>
+                        <li>Measurement & Marketing ROI</li>
                     </ul>
                 </div>
                 <div class="f_serv">
                     <h3>Resourses</h3>
                     <ul>
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Study</a></li>
-                        <li><a href="#">Contact US</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./casestudy.html">Case Study</a></li>
+                        <li><a href="./contact.html">Contact US</a></li>
                     </ul>
                 </div>
             </div>
@@ -355,13 +356,31 @@
             element.style.height = (element.scrollHeight) + "px";
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- custom js  -->
     <script src="./assets/script.js"></script>
+    <script>
+        jQuery('#frmContactus').on('submit', function (e) {
+            jQuery('#sucmsg').html('');
+            jQuery('#submit').html('Sending...');
+            jQuery('#submit').attr('disabled', true);
+            jQuery.ajax({
+                url: 'contactmail.php',
+                type: 'post',
+                data: jQuery('#frmContactus').serialize(),
+                success: function (result) {
+                    jQuery('#sucmsg').html("Thank you for getting in touch!");
+                    jQuery('#submit').html('Send Message');
+                    jQuery('#submit').attr('disabled', false);
+                    jQuery('#frmContactus')[0].reset();
+                }
+            });
+            e.preventDefault();
+        });
+    </script>
+
 
 
 </body>

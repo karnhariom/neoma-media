@@ -7,22 +7,6 @@ function openmenu() {
     navmenu.classList.toggle("navopen");
 }
 
-gsap.from(".area1", {
-    rotate: 10,
-    duration: 2
-});
-
-gsap.from(".area2", {
-    rotate: -10,
-    duration: 2
-});
-
-gsap.from(".earth-image", {
-    opacity: 0,
-    duration: 2,
-    delay: 2,
-});
-
 gsap.from(".introvideo", {
     scrollTrigger: ".introvideo",
     scale: .5,
@@ -43,22 +27,6 @@ gsap.from(".circle4 .setcount", {
     opacity: 0,
     delay: 10
 });
-
-
-// gsap.to(".projsec",{
-//     transform: "translateX(-100%)",
-//     scrollTrigger:{
-//         trigger: ".projsec",
-//         scroller: "body",
-//         pin: true,
-//         scrub: 5,
-//         start: "top 0",
-//         end: "bottom 50%",
-//         markers: true
-//     }
-// })
-
-
 
 const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
@@ -114,7 +82,6 @@ gsap.to(".ltastr", {
         end: "bottom top"
     },
 
-    // y: 700,
     yPercent: 90,
     ease: "none"
 });
