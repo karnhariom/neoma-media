@@ -1,3 +1,12 @@
+var hamburger = document.querySelector(".hamburger")
+var navmenu = document.querySelector(".navmneu")
+
+hamburger.addEventListener("click", openmenu);
+
+function openmenu() {
+    navmenu.classList.toggle("navopen");
+}
+
 gsap.from(".area1", {
     rotate: 10,
     duration: 2
@@ -34,6 +43,20 @@ gsap.from(".circle4 .setcount", {
     opacity: 0,
     delay: 10
 });
+
+
+// gsap.to(".projsec",{
+//     transform: "translateX(-100%)",
+//     scrollTrigger:{
+//         trigger: ".projsec",
+//         scroller: "body",
+//         pin: true,
+//         scrub: 5,
+//         start: "top 0",
+//         end: "bottom 50%",
+//         markers: true
+//     }
+// })
 
 
 
@@ -140,11 +163,29 @@ var swiper = new Swiper(".logoswiper", {
     // mousewheel: true,
 });
 
-var hamburger = document.querySelector(".hamburger")
-var navmenu = document.querySelector(".navmneu")
 
-hamburger.addEventListener("click", openmenu);
+const races = document.querySelector(".projsec");
 
-function openmenu() {
-    navmenu.classList.toggle("navopen");
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
 }
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+
+ScrollTrigger.create({
+	trigger:".projsec",
+	start:"top 0",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
+	markers:true
+})
+

@@ -305,30 +305,60 @@ a {
         }
     }
 }
+
 // projects section end
 
-.projsec{
+.projsec {
     display: flex;
     overflow-x: scroll;
     width: 400vw;
 
-    .singlepro{
+    .singlepro {
         width: 100vw;
         height: 100vh;
-    }
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
 
-    .pr_1{
-        background: red;
-    }
+        img {
+            width: 100vw;
+            height: 100vh;
+        }
 
-    .pr_2{
-        background: green;
-    }
-    .pr_3{
-        background: yellow;
-    }
-    .pr_4{
-        background: orange;
+        .p_details {
+            position: absolute;
+            width: 100%;
+            padding: 4vw;
+            backdrop-filter: blur(4px);
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                color: white;
+                font-size: 5vw;
+            }
+
+        }
+
+        .p_tags {
+            position: absolute;
+            top: 2vw;
+            left: 2vw;
+            display: flex;
+            gap: 1vw;
+
+            span {
+                padding: .5vw 1.4vw;
+                border: 1px solid white;
+                background-color: white;
+                color: black;
+                font-size: 1.4vw;
+                border-radius: 1000px;
+            }
+        }
     }
 
 }
@@ -788,7 +818,7 @@ a {
 .approach {
     position: relative;
 
-    .astrapp{
+    .astrapp {
         position: absolute;
         width: 15vw;
         top: 2vw;
@@ -809,7 +839,8 @@ a {
         overflow: visible;
         margin-top: 5vw;
         position: relative;
-        transform: scale(1.1);
+        // transform: scale(1.1);
+        // transform: scaleX(1.2);
         z-index: -1;
 
         .setcount {
@@ -838,7 +869,7 @@ a {
                 border-radius: 9px;
                 transform: rotate(274deg);
                 top: 7px;
-                left: -177px;
+                left: -10vw;
                 padding: .5vw;
 
                 p {
@@ -848,6 +879,7 @@ a {
                     border-radius: 9px;
                     background: rgba(255, 255, 255, 0.15);
                     backdrop-filter: blur(2px);
+                    font-size: 1vw;
                 }
 
                 &::after {
@@ -878,17 +910,18 @@ a {
         }
 
         .circle1 {
-            width: 100vw;
-            height: 50vw;
+            width: 74vw;
+            height: 37vw;
             border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: relative;
+            margin: auto;
 
         }
 
         .circle2 {
-            width: 86vw;
-            height: 43vw;
+            width: 66vw;
+            height: 33vw;
             border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
@@ -902,8 +935,8 @@ a {
         }
 
         .circle3 {
-            width: 72vw;
-            height: 36vw;
+            width: 56vw;
+            height: 28vw;
             border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
@@ -917,8 +950,8 @@ a {
         }
 
         .circle4 {
-            width: 58vw;
-            height: 29vw;
+            width: 44vw;
+            height: 22vw;
             border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
@@ -933,8 +966,8 @@ a {
         }
 
         .circle5 {
-            width: 44vw;
-            height: 22vw;
+            width: 36vw;
+            height: 18vw;
             border: 1px solid rgba(0, 0, 0, 0.062);
             border-radius: 999999px 999999px 0 0;
             position: absolute;
@@ -1058,7 +1091,7 @@ a {
             .ltastr {
                 position: absolute;
                 top: 0;
-                left: -15%;
+                left: -30%;
                 z-index: -1;
                 height: 100%;
 
@@ -1529,8 +1562,8 @@ a {
     padding: 6vw 4vw;
     position: relative;
 
-    .casetitle{
-        h2{
+    .casetitle {
+        h2 {
             font-size: 5vw;
             color: #004AB8;
             font-weight: 500;
@@ -1538,34 +1571,34 @@ a {
         }
     }
 
-    .casemeta{
+    .casemeta {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         text-align: center;
         margin-top: 3vw;
 
-        .metabox{
-            p{
+        .metabox {
+            p {
                 color: #616161;
             }
 
-            h4{
+            h4 {
                 color: $orange;
                 font-size: 1.4vw;
             }
         }
     }
 
-    img{
+    img {
         position: absolute;
 
-        &.imgtop{
+        &.imgtop {
             top: 6vw;
             left: 1vw;
             width: 10vw;
         }
 
-        &.imgright{
+        &.imgright {
             top: 4vw;
             right: 1vw;
             width: 10vw;
@@ -1573,114 +1606,115 @@ a {
     }
 }
 
-.singlecasecontent{
+.singlecasecontent {
     position: relative;
-    
-    .casecontent{
+
+    .casecontent {
         padding: 4vw 0;
         margin: auto;
         position: relative;
 
-        .innerdiv{
+        .innerdiv {
             max-width: 80%;
             margin: auto;
         }
-    
-        .caseimg{
+
+        .caseimg {
             position: relative;
-        
-            .cbanner{
+
+            .cbanner {
                 display: block;
                 width: 100%;
                 margin: auto;
                 border-radius: 1rem;
             }
 
-            .topstar{
+            .topstar {
                 position: absolute;
                 top: 40%;
                 left: -7vw;
             }
 
-            .bottomstar{
+            .bottomstar {
                 width: 2vw;
                 position: absolute;
                 top: 70%;
                 left: -7vw;
             }
-    
+
         }
-    
-        .casegrid{
+
+        .casegrid {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 3vw;
             padding: 2vw 0;
-    
-            .cimg{
-                img{
+
+            .cimg {
+                img {
                     width: 80%;
                 }
-    
+
             }
-    
-            .numberc{
+
+            .numberc {
                 position: relative;
-    
-                h3{
+
+                h3 {
                     font-size: 8vw;
                     text-align: center;
                     -webkit-text-stroke: 1px $blue;
                     color: transparent;
                 }
-    
-                &::after{
+
+                &::after {
                     content: "";
                     position: absolute;
                     width: 1px;
                     height: 90%;
                     border-left: 2px dashed $blue;
-                    left: 50%;      
-                    z-index: -1;       
+                    left: 50%;
+                    z-index: -1;
                 }
-    
-                &.nodasline::after{
+
+                &.nodasline::after {
                     display: none;
                 }
 
-                .str{
+                .str {
                     position: absolute;
                     top: 45%;
                 }
             }
-    
-            .rightccontent{
-                .cttle{
+
+            .rightccontent {
+                .cttle {
                     color: #004AB8;
                     font-size: 2vw;
                     margin-bottom: 1vw;
                 }
-                p{
+
+                p {
                     margin-bottom: 1vw;
                 }
-    
-                .bulletlist{
+
+                .bulletlist {
                     padding-left: 4vw;
 
-                    ul{
-                        li{
+                    ul {
+                        li {
                             color: #616161;
                             list-style-type: disc;
                         }
                     }
-    
-                    h4{
+
+                    h4 {
                         font-size: 1.6vw;
                         color: $orange;
                         position: relative;
                         margin-bottom: 0.44vw;
-    
-                        &::before{
+
+                        &::before {
                             content: "";
                             width: 3.5vw;
                             height: 2vw;
@@ -1692,13 +1726,14 @@ a {
                             background-repeat: no-repeat;
                         }
                     }
-                    p{
+
+                    p {
                         color: #616161;
                         position: relative;
                     }
 
-                    &.starlist{
-                        p::before{
+                    &.starlist {
+                        p::before {
                             content: "";
                             position: absolute;
                             left: -3vw;
@@ -1712,31 +1747,32 @@ a {
                     }
                 }
             }
-    
+
         }
     }
 
-    .grp1{
+    .grp1 {
         position: absolute;
         left: 0;
         top: 20vw;
         width: 4vw;
     }
-    .grp2{
+
+    .grp2 {
         position: absolute;
         right: 0;
         top: 70vw;
         width: 4vw;
     }
 
-    .grp3{
+    .grp3 {
         position: absolute;
         left: 0;
         top: 180vw;
         width: 5vw;
     }
 
-    .grp4{
+    .grp4 {
         position: absolute;
         right: 2vw;
         top: 230vw;
@@ -2029,6 +2065,7 @@ footer {
         }
     }
 }
+
 // footer style end
 
 
@@ -2121,7 +2158,7 @@ footer {
     li,
     a,
     .btn {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .projects .titlebox .rocket {
@@ -2169,8 +2206,46 @@ footer {
         }
 
         &::before {
-            width: 75vw;
-            height: 70vw;
+            width: 63vw;
+            height: 55vw;
+        }
+    }
+
+    .numbersec .numbgrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+        .titleg{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .firstbox{
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        .secondbox{
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .thirdbox{
+            grid-area: 3 / 1 / 4 / 2;
+        }
+        .fourthbox{
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        .n_box{
+            h4,h3{
+                font-size: 25px;
+            }
+
+            .boxastro{
+                position: static;
+                height: 12vw;
+            } 
+
+            &.titleg svg{
+                position: static;
+            }
         }
     }
 

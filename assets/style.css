@@ -255,18 +255,44 @@ a {
 .projsec .singlepro {
   width: 100vw;
   height: 100vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
-.projsec .pr_1 {
-  background: red;
+.projsec .singlepro img {
+  width: 100vw;
+  height: 100vh;
 }
-.projsec .pr_2 {
-  background: green;
+.projsec .singlepro .p_details {
+  position: absolute;
+  width: 100%;
+  padding: 4vw;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.projsec .pr_3 {
-  background: yellow;
+.projsec .singlepro .p_details h3 {
+  color: white;
+  font-size: 5vw;
 }
-.projsec .pr_4 {
-  background: orange;
+.projsec .singlepro .p_tags {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  display: flex;
+  gap: 1vw;
+}
+.projsec .singlepro .p_tags span {
+  padding: 0.5vw 1.4vw;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  font-size: 1.4vw;
+  border-radius: 1000px;
 }
 
 .clients-box {
@@ -634,7 +660,6 @@ a {
   overflow: visible;
   margin-top: 5vw;
   position: relative;
-  transform: scale(1.1);
   z-index: -1;
 }
 .approach .appr_grp .setcount {
@@ -661,7 +686,7 @@ a {
   border-radius: 9px;
   transform: rotate(274deg);
   top: 7px;
-  left: -177px;
+  left: -10vw;
   padding: 0.5vw;
 }
 .approach .appr_grp .setcount .settext p {
@@ -672,6 +697,7 @@ a {
   background: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  font-size: 1vw;
 }
 .approach .appr_grp .setcount .settext::after {
   content: "";
@@ -695,15 +721,16 @@ a {
   border-radius: 100%;
 }
 .approach .appr_grp .circle1 {
-  width: 100vw;
-  height: 50vw;
+  width: 74vw;
+  height: 37vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: relative;
+  margin: auto;
 }
 .approach .appr_grp .circle2 {
-  width: 86vw;
-  height: 43vw;
+  width: 66vw;
+  height: 33vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -715,8 +742,8 @@ a {
   animation-delay: 5s;
 }
 .approach .appr_grp .circle3 {
-  width: 72vw;
-  height: 36vw;
+  width: 56vw;
+  height: 28vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -728,8 +755,8 @@ a {
   animation-delay: 3s;
 }
 .approach .appr_grp .circle4 {
-  width: 58vw;
-  height: 29vw;
+  width: 44vw;
+  height: 22vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -741,8 +768,8 @@ a {
   animation-delay: 9s;
 }
 .approach .appr_grp .circle5 {
-  width: 44vw;
-  height: 22vw;
+  width: 36vw;
+  height: 18vw;
   border: 1px solid rgba(0, 0, 0, 0.062);
   border-radius: 999999px 999999px 0 0;
   position: absolute;
@@ -838,7 +865,7 @@ a {
 .processsec .prright .astline .ltastr {
   position: absolute;
   top: 0;
-  left: -15%;
+  left: -30%;
   z-index: -1;
   height: 100%;
 }
@@ -1648,7 +1675,7 @@ footer .c_footer ul li a {
   li,
   a,
   .btn {
-    font-size: 18px;
+    font-size: 16px;
   }
   .projects .titlebox .rocket {
     display: none;
@@ -1680,8 +1707,37 @@ footer .c_footer ul li a {
     margin-bottom: 20px;
   }
   .contactsection .contactbox::before {
-    width: 75vw;
-    height: 70vw;
+    width: 63vw;
+    height: 55vw;
+  }
+  .numbersec .numbgrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .numbersec .numbgrid .titleg {
+    grid-area: 1/1/2/3;
+  }
+  .numbersec .numbgrid .firstbox {
+    grid-area: 2/1/3/2;
+  }
+  .numbersec .numbgrid .secondbox {
+    grid-area: 2/2/3/3;
+  }
+  .numbersec .numbgrid .thirdbox {
+    grid-area: 3/1/4/2;
+  }
+  .numbersec .numbgrid .fourthbox {
+    grid-area: 3/2/4/3;
+  }
+  .numbersec .numbgrid .n_box h4, .numbersec .numbgrid .n_box h3 {
+    font-size: 25px;
+  }
+  .numbersec .numbgrid .n_box .boxastro {
+    position: static;
+    height: 12vw;
+  }
+  .numbersec .numbgrid .n_box.titleg svg {
+    position: static;
   }
   footer .bottom_footer {
     flex-direction: column;
