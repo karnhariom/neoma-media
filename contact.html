@@ -18,9 +18,34 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/style.css">
+    <meta name="google-site-verification" content="S8LU_4XMshdxsWQ8ZWz6YdKoXeRmhfEHj8Qp-Ky5Afs" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TP7BKF29');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHRQP0PQ8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CHRQP0PQ8E');
+</script>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP7BKF29"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- header section start -->
     <header class="topheader">
         <div class="logo">
@@ -181,7 +206,9 @@
             </li>
         </ul>
         <div class="hamburger">
-            <i class="fi fi-ts-bars-staggered"></i>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
     <!-- header section end -->
@@ -202,7 +229,7 @@
         </div>
         <div class="c_form">
             <form method="post" id="frmContactus">
-                <p>Hello! My name is <input type="text" name="name" id="" placeholder="John Doe" autocomplete="off"> And
+                <p>Hello! My name is <input type="text" name="name" id="" placeholder="John Doe" autocomplete="off" required> And
                     I work in <input type="text" name="c_name" id="" placeholder="XYZ Pvt. Ltd" autocomplete="off">. I
                     found you using
                     <span class="selectfield">
@@ -232,23 +259,28 @@
                     </span>
                     I’m looking for help with:
                     <span class="selectfield">
-                        <label for="Brandidentity"> Brand Identity</label>
-                        <input type="checkbox" id="Brandidentity" name="helpwant" value="Brand Identity">
+                        <label for="Brandidentity"> Marketing Strategy & Insights</label>
+                        <input type="checkbox" name="helpwant" value="Marketing Strategy & Insights">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
-                        <label for="WebDesign"> Website Design</label>
-                        <input type="checkbox" id="WebDesign" name="helpwant" value="Website Design">
+                        <label for="WebDesign"> Creative & Content Production</label>
+                        <input type="checkbox" name="helpwant" value="Creative & Content Production">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
-                        <label for="Productdesign"> Product design</label>
-                        <input type="checkbox" id="Productdesign" name="helpwant" value="Product design">
+                        <label for="Productdesign"> Media & Channel Activation</label>
+                        <input type="checkbox" name="helpwant" value="Media & Channel Activation">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
-                        <label for="WebDevelopment"> Website Development</label>
-                        <input type="checkbox" id="WebDevelopment" name="helpwant" value="Website Development">
+                        <label for="WebDevelopment"> Customer Experience & Personalization</label>
+                        <input type="checkbox" name="helpwant" value="Customer Experience & Personalization">
+                        <span class="c_box"></span>
+                    </span>
+                    <span class="selectfield">
+                        <label for="WebDevelopment"> Measurement & Marketing ROI</label>
+                        <input type="checkbox" name="helpwant" value="Measurement & Marketing ROI">
                         <span class="c_box"></span>
                     </span>
                     <span class="selectfield">
@@ -258,23 +290,23 @@
                     </span>
 
                     Feel free to reach me at <input type="email" name="email" id="" placeholder="johndoe@example.com"
-                        autocomplete="off">
+                        autocomplete="off" required>
                     to begin the conversation.<br>
                     <textarea name="message" id="" onkeyup="textAreaAdjust(this)"
                         rows="1">I would like to share more about my project...</textarea>
                 </p>
-                <div class="agreement">
+                <!-- <div class="agreement">
                     <span class="selectfield">
                         <label for="agreement"> I agree with privacy policy</label>
                         <input type="checkbox" id="agreement" name="agreement" value="agreement">
                         <span class="c_box"></span>
                     </span>
-                </div>
+                </div> -->
                 <div class="submit">
                     <button type="submit" id="submit" class="y_btn btn">Start your journey <i
                             class="fi fi-rr-arrow-right"></i></button>
                 </div>
-                <p id="sucmsg" style="color: white;">Success!</p>
+                <p id="sucmsg" style="color: white;"></p>
             </form>
         </div>
     </div>

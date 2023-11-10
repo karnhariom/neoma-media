@@ -28,6 +28,27 @@ gsap.from(".circle4 .setcount", {
     delay: 10
 });
 
+gsap.to(".ltastr", {
+    scrollTrigger: {
+        trigger: ".ltastr",
+        scrub: 3,
+        start: "500px bottom",
+        end: "bottom top"
+    },
+
+    yPercent: 90,
+    ease: "none"
+});
+
+// testimonial section 
+
+var swiper = new Swiper(".revSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 const videoContainer = document.getElementById('video-container');
 const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-button');
@@ -74,17 +95,7 @@ gsap.from(".innerrocket", {
     ease: "none"
 });
 
-gsap.to(".ltastr", {
-    scrollTrigger: {
-        trigger: ".ltastr",
-        scrub: 3,
-        start: "500px bottom",
-        end: "bottom top"
-    },
 
-    yPercent: 90,
-    ease: "none"
-});
 
 gsap.to(".aline", {
     scrollTrigger: {
@@ -106,28 +117,16 @@ gsap.from(".l_box img", {
     scrub: 1
 });
 
-// testimonial section 
 
-var swiper = new Swiper(".revSwiper", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
 var swiper = new Swiper(".logoswiper", {
     slidesPerView: 2,
     spaceBetween: 30,
-    //   autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    //   },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     loop: true,
-    // mousewheel: true,
 });
 
 
@@ -153,6 +152,5 @@ ScrollTrigger.create({
 	animation:tween,
 	scrub:1,
 	invalidateOnRefresh:true,
-	markers:true
 })
 

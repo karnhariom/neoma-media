@@ -4,8 +4,8 @@
         include("connection.php");
     $name    = @trim(stripslashes($_POST['name']));
     $companyname    = @trim(stripslashes($_POST['c_name']));
-    $reachby = $_GET['reachby'];
-    $helpwant = $_GET['helpwant'];
+    $reachby    = @trim(stripslashes($_POST['reachby']));
+    $helpwant    = @trim(stripslashes($_POST['helpwant']));
     $email   = @trim(stripslashes($_POST['email']));
     $message = @trim(stripslashes($_POST['message']));
 
@@ -52,7 +52,7 @@
         $message = $_POST['message'];
         
   
-        $qu= "INSERT INTO `contactform` (`name`, `email`, `phone`, `subject`, `message`) VALUES ('".$name."', '".$email."', '".$phone."','".$subject."', '".$message."')";
+        $qu= "INSERT INTO `contactform` (`name`, `company`, `reachby`, `helpwant`, `email`, `message`) VALUES ('".$name."', '".$companyname."', '".$reachby."','".$helpwant."', '".$email."','".$message."')";
       if($conn->query($qu)===TRUE){
         // echo "<script>
         // window.location='https://neoma.media';

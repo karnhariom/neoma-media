@@ -123,6 +123,13 @@ a {
   color: white;
   font-size: 20px;
 }
+.topheader .hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+}
 
 .herosection {
   background-color: #181818;
@@ -1273,6 +1280,7 @@ a {
   color: #004AB8;
   font-weight: 500;
   text-align: center;
+  padding: 0 10vw;
 }
 .s_casehero .casemeta {
   display: grid;
@@ -1730,8 +1738,8 @@ footer .c_footer ul li a {
   p,
   li,
   a,
-  .btn {
-    font-size: 16px;
+  .btn, input, textarea {
+    font-size: 16px !important;
   }
   .projects .titlebox .rocket {
     display: none;
@@ -2034,6 +2042,19 @@ footer .c_footer ul li a {
     padding: 10px;
     background: url(./images/tframe.webp);
     border-radius: 10px;
+  }
+  .formsection {
+    padding: 10px;
+  }
+  .formsection .c_form form .selectfield .c_box {
+    width: 10px;
+    height: 10px;
+  }
+  .c_details .s_detail {
+    flex-direction: column;
+  }
+  .c_details .s_detail .pright {
+    text-align: left;
   }
 }
 @keyframes earth {
